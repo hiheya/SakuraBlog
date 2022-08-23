@@ -1,0 +1,125 @@
+# site name
+prefixName: 🐼
+siteName: Rookie_l's Bolg
+# favicon and site master avatar
+favicon: https://icu007.work/wp-content/uploads/2022/08/cropped-cropped-icno.png
+avatar: /img/custom/avatar.jpg
+url: https://hiheya.github.io/
+description: 与君共赴，万里征程。
+# cdn: https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2
+pjax: 1
+# 1开启
+mathjax: 0
+
+notice: 欢迎来到我的秘密小屋...
+lazyloadImg: https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg
+
+menus:
+  首页: { path: /, fa: fa-fort-awesome faa-shake }
+  归档: { path: /archive, fa: fa-archive faa-shake, submenus: { 
+    技术: {path: /categories/技术/, fa: fa-code }, 
+    生活: {path: /categories/生活/, fa: fa-file-text-o }, 
+    资源: {path: /categories/资源/, fa: fa-cloud-download }, 
+    随想: {path: /categories/随想/, fa: fa-commenting-o },
+    转载: {path: /categories/转载/, fa: fa-book }
+  } }
+  清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
+    书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce }, 
+    番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
+    歌单: {path: /music/, fa: fa-headphones }
+  } }
+  留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
+  友人帐: { path: /links/, fa: fa-link faa-shake }
+  赞赏: { path: /donate/, fa: fa-heart faa-pulse }
+  关于: { path: /about/, fa: fa-leaf faa-wrench }
+  客户端: { path: /client/, fa: fa-android faa-vertical }
+  # RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
+
+
+# Home page sort type: -1: newer first，1: older first.
+homePageSortType: -1
+# Home page article shown number)
+homeArticleShown: 10
+# 背景图片 更好的修改
+bg:
+  - https://api.ixiaowai.cn/mcapi/mcapi.php
+  #- https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp
+  #- https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp
+  #- https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp
+  #- https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp
+  #- https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp
+  #- https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp
+  #- https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp
+  #- https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp
+
+# 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
+bgclass: 
+
+# startdash url, title, desc img
+startdash: 
+  - {url: https://icu007.work, title: 我的主站, desc: 点击访问主站, img: /img/startdash/sakura.md.png}
+  - {url: https://space.bilibili.com/55406380, title: Bilibili, desc: 博主的b站视频, img: /img/startdash/bilibili.jpg}
+  - {url: https://baidu.icu007.work, title: 让我帮你百度一下, desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
+
+
+
+# your site build time or founded date
+siteBuildingTime: 07/17/2022
+
+#social  url, img PC端配置
+social:
+  github: {url: http://github.com/hiheya, img: /img/social/github.png}
+  sina: {url: https://weibo.com/u/5400016811, img: /img/social/sina.png}
+  wangyiyun: {url: https://music.163.com/#/user/home?id=1300961291, img: /img/social/wangyiyun.png}
+  zhihu: {url: https://www.zhihu.com/people/liao-xi-he, img: /img/social/zhihu.png}
+  email: {url: mailto:rookie_l@icu007.work, img: /img/social/email.svg}
+  wechat: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
+  # wechat2: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
+
+#social  url, img 移动端配置
+msocial:
+  github: {url: http://github.com/hiheya, fa: fa-github, color: 333}
+  weibo: {url: https://weibo.com/u/5400016811, fa: fa-weibo, color: dd4b39}
+  qq: {url: https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
+
+donate:
+  # paypal: https://www.paypal.me/hojuncn
+  alipay: /img/custom/donate/AliPayQR.jpg
+  wechat: /img/custom/donate/WeChanQR.jpg
+  wechatSQ: /img/custom/donate/WeChanSQ.jpg
+
+# 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
+movies:
+  url: https://cdn.jsdelivr.net/gh/honjun/hojun@1.2
+  # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
+  name: Unbroken.mp4
+
+aplayer: 
+  id: 6842714056
+  server: netease
+  type: playlist
+  fixed: true
+  autoplay: false
+  loop: all
+  order: random
+  preload: auto
+  volume: 0.7
+  mutex: true
+
+# Valine
+valine: true
+v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
+v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
+
+# Waline
+waline:
+  enable: false
+  serverURL: #服务端地址
+  visitor: false #统计阅读量
+  comment_count: true #统计评论数
+  avatar: mp # Gravatar style : mp/identicon/monsterid/wavatar/retro/hide
+  guest_info: nick #,mail,link # custom comment header
+  pageSize: 10
+  placeholder: 祝开开心心！ # Comment Box placeholder
+  requiredFields: [ 'nick','mail' ] #设置必填项
+  background: https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich2.gif #输入框提示动画
