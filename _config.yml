@@ -103,3 +103,18 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
+
+prism_plugin:
+  mode: 'preprocess'    
+  theme: 'default'
+  line_number: false    # default false
+  custom_css: 'path/to/your/custom.css'     # optional
+
+permalink_pinyin:
+  enable: true
+  separator: '' # default: '-'
+
+#看板娘
+live2d: ##自定义看板娘动画
+  enable: true
+

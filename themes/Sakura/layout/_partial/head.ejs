@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
   <link rel="stylesheet" href="/css/zoom.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <link rel="stylesheet" href="/js/sakura-app.js" type="text/css" media="all" id="saukra_css-css">
+
 <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
 " type="text/css" media="all"> -->
   <script>
@@ -55,6 +57,9 @@
   mashiro_option.v_appId = "<%= theme.v_appId %>";
   mashiro_option.v_appKey = "<%= theme.v_appKey %>";
   mashiro_option.mathjax = "<%= theme.mathjax %>";
+  mashiro_option.copyright_enable = "<%= theme.copyright.enable %>" ;
+  mashiro_option.copyright_minCharNumber = parseInt("<%= theme.copyright.minCharNumber %>") ;
+  mashiro_option.copyright_description = "<%= theme.copyright.description %>" ;
   mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
   mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
@@ -63,6 +68,13 @@
 
   /*End of Initial Variables*/
   </script>
+
+<!--自定义看板娘-->
+<script src="/live2d-widget/jquery.min.js"></script>
+<script src="/live2d-widget/autoload.js"></script>
+<link rel="stylesheet" href="/live2d-widget/font-awesome.min.css"/>
+
+
   <script type="text/javascript">
   var bg = "<%= theme.bg%>".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
