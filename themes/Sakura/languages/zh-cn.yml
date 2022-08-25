@@ -47,9 +47,39 @@ insight:
     img: https://api.ixiaowai.cn/mcapi/mcapi.php
 生活:
     zh: 生活
-    en: live
+    en: Live
+    img: https://api.ixiaowai.cn/mcapi/mcapi.php
+资源:
+    zh: 资源
+    en: Resource
+    img: https://api.ixiaowai.cn/mcapi/mcapi.php
+随想:
+    zh: 随想
+    en: Inspiration
     img: https://api.ixiaowai.cn/mcapi/mcapi.php
 
 #tag
 悦读:
+    zh: 阅读
+    en: Read
+    img: https://api.ixiaowai.cn/mcapi/mcapi.php
+Java:
+    zh: Java
+    en: Java
+    img: https://api.ixiaowai.cn/mcapi/mcapi.php
+随笔:
+    zh: 随笔
+    en: Notes
+    img: https://api.ixiaowai.cn/mcapi/mcapi.php
+Markdown:
+    zh: Markdown
+    en: Markdown
+    img: https://api.ixiaowai.cn/mcapi/mcapi.php
+WP:
+    zh: WordPress
+    en: WordPress
+    img: https://api.ixiaowai.cn/mcapi/mcapi.php
+硬件:
+    zh: 硬件
+    en: Hardware
     img: https://api.ixiaowai.cn/mcapi/mcapi.php
