@@ -37,7 +37,7 @@ menus:
     Java: {path: /tags/Java/, fa: fa-code }, 
     随笔: {path: /tags/随笔/, fa: fa-file-text-o }, 
     M-D: {path: /tags/Markdown/, fa: fa fa-list-alt }, 
-    WP: {path: /tags/WP/, fa: fa fa-file-o },
+    WP: {path: /tags/WordPress/, fa: fa fa-file-o },
     硬件: {path: /tags/硬件/, fa: fa fa-bicycle }
   } }
   留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
