@@ -17,33 +17,33 @@ pjax: 1
 # 1开启
 mathjax: 0
 
-notice: 欢迎来到我的秘密小屋...
+notice: 本博客为了美观，文章头图均与正文无关。
 lazyloadImg: https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg
 
 menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
-  归档: { path: /archive, fa: fa-archive faa-shake, submenus: { 
+  归档: { path: /archive, fa: fa-archive faa-wrench, submenus: { 
     技术: {path: /categories/技术/, fa: fa-code }, 
     生活: {path: /categories/生活/, fa: fa-file-text-o }, 
     资源: {path: /categories/资源/, fa: fa-cloud-download }, 
     随想: {path: /categories/随想/, fa: fa-commenting-o }
   } }
-  清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
+  清单: { path: javascript:;, fa: fa-list-ul faa-float, submenus: { 
     书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce }, 
-    番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
+    番组: {path: /bangumi/, fa: fa-film faa-passing }, 
     歌单: {path: /music/, fa: fa-headphones }
   } }
-  标签: { path: javascript:;, fa: fa fa-bookmark, submenus: { 
-    Java: {path: /tags/Java/, fa: fa-code }, 
-    随笔: {path: /tags/随笔/, fa: fa-file-text-o }, 
-    M-D: {path: /tags/Markdown/, fa: fa fa-list-alt }, 
-    WP: {path: /tags/WordPress/, fa: fa fa-file-o },
-    硬件: {path: /tags/硬件/, fa: fa fa-bicycle }
+  标签: { path: /tags/, fa: fa fa-bookmark faa-ring, submenus: { 
+    Java: {path: /tags/Java/, fa: fa-code faa-burst }, 
+    随笔: {path: /tags/随笔/, fa: fa-file-text-o faa-falling }, 
+    WP: {path: /tags/WordPress/, fa: fa fa-file-o faa-rising },
+    硬件: {path: /tags/硬件/, fa: fa fa-bicycle faa-ring }
   } }
-  留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
-  友人帐: { path: /links/, fa: fa-link faa-shake }
-  赞赏: { path: /donate/, fa: fa-heart faa-pulse }
-  关于: { path: /about/, fa: fa-leaf faa-wrench }
+  分类: { path: /category/, fa: fa fa-th-large faa-horizontal }
+  留言: { path: /comment/, fa: fa-pencil-square-o faa-tada }
+  友链: { path: /links/, fa: fa-link faa-vertical }
+  赞赏: { path: /donate/, fa: fa-heart faa-flash }
+  关于: { path: /about/, fa: fa-leaf faa-pulse }
   
   # RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
 
@@ -119,9 +119,13 @@ aplayer:
   mutex: true
 
 # Valine
-valine: true
+valine: false
 v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
 v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
+
+# livere
+livere: true
+data_uid: MTAyMC81NzEzMi8zMzU5Ng==
 
 # Waline
 waline:

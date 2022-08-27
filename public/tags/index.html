@@ -89,7 +89,9 @@
         </a>
       </div>
       <div class="header-info">
-        <p>与君共赴，万里征程。</p>
+        <!-- <p>与君共赴，万里征程。</p> -->
+        <p id="jinrishici-sentence">正在加载今日诗词....</p>
+        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         <div class="top-social_v2">
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
@@ -215,7 +217,7 @@
               <li>
                 <a href="/archive">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    <i class="fa  fa-archive faa-wrench" aria-hidden="true"></i>
                     归档
                   </span>
                 </a>
@@ -257,7 +259,7 @@
               <li>
                 <a href="javascript:;">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    <i class="fa  fa-list-ul faa-float" aria-hidden="true"></i>
                     清单
                   </span>
                 </a>
@@ -273,7 +275,7 @@
                     
                       <li>
                         <a href="/bangumi/">
-                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          <i class="fa fa-film faa-passing" aria-hidden="true"></i>
                           番组
                         </a>
                       </li>
@@ -290,9 +292,9 @@
               </li>
             
               <li>
-                <a href="javascript:;">
+                <a href="/tags/">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa fa-bookmark" aria-hidden="true"></i>
+                    <i class="fa  fa fa-bookmark faa-ring" aria-hidden="true"></i>
                     标签
                   </span>
                 </a>
@@ -301,35 +303,28 @@
                     
                       <li>
                         <a href="/tags/Java/">
-                          <i class="fa fa-code" aria-hidden="true"></i>
+                          <i class="fa fa-code faa-burst" aria-hidden="true"></i>
                           Java
                         </a>
                       </li>
                     
                       <li>
                         <a href="/tags/随笔/">
-                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          <i class="fa fa-file-text-o faa-falling" aria-hidden="true"></i>
                           随笔
                         </a>
                       </li>
                     
                       <li>
-                        <a href="/tags/Markdown/">
-                          <i class="fa fa fa-list-alt" aria-hidden="true"></i>
-                          M-D
-                        </a>
-                      </li>
-                    
-                      <li>
                         <a href="/tags/WordPress/">
-                          <i class="fa fa fa-file-o" aria-hidden="true"></i>
+                          <i class="fa fa fa-file-o faa-rising" aria-hidden="true"></i>
                           WP
                         </a>
                       </li>
                     
                       <li>
                         <a href="/tags/硬件/">
-                          <i class="fa fa fa-bicycle" aria-hidden="true"></i>
+                          <i class="fa fa fa-bicycle faa-ring" aria-hidden="true"></i>
                           硬件
                         </a>
                       </li>
@@ -339,10 +334,20 @@
               </li>
             
               <li>
+                <a href="/category/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa fa-th-large faa-horizontal" aria-hidden="true"></i>
+                    分类
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
                 <a href="/comment/">
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
-                    留言板
+                    留言
                   </span>
                 </a>
                 
@@ -351,8 +356,8 @@
               <li>
                 <a href="/links/">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-                    友人帐
+                    <i class="fa  fa-link faa-vertical" aria-hidden="true"></i>
+                    友链
                   </span>
                 </a>
                 
@@ -361,7 +366,7 @@
               <li>
                 <a href="/donate/">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    <i class="fa  fa-heart faa-flash" aria-hidden="true"></i>
                     赞赏
                   </span>
                 </a>
@@ -371,7 +376,7 @@
               <li>
                 <a href="/about/">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    <i class="fa  fa-leaf faa-pulse" aria-hidden="true"></i>
                     关于
                   </span>
                 </a>
@@ -385,77 +390,436 @@
   </div>
 </header>
 
-        <div class="pattern-center-blank"></div>
-  
-    <div class="pattern-center ">
-      <div class="pattern-attachment-img">
-        <img src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva2.sinaimg.cn/large/87c01ec7gy1fsnqqw744pj21kw0w0dwt.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-      </div>
-      <header class="pattern-header ">
-        <h1 class="entry-title">
-        </h1>
-      </header>
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">🐼</span>
+            <span class="shironeko">Rookie_l&#39;s Bolg</span>
+          </a>
+        </span>
+      </span>
     </div>
-  
-  <div id="content" class="site-content">
-    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-      
-      <!-- .entry-content -->
-      
-<div id="vcomments"></div>
-<script>
-  window.onload = function(){
-      var valine = new Valine();
-      valine.init({
-        el: '#vcomments',
-        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
-        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
-        path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
-      })
-  }
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archive">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-wrench" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-float" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-passing" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/tags/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa fa-bookmark faa-ring" aria-hidden="true"></i>
+                    标签
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/Java/">
+                          <i class="fa fa-code faa-burst" aria-hidden="true"></i>
+                          Java
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/随笔/">
+                          <i class="fa fa-file-text-o faa-falling" aria-hidden="true"></i>
+                          随笔
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/WordPress/">
+                          <i class="fa fa fa-file-o faa-rising" aria-hidden="true"></i>
+                          WP
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/硬件/">
+                          <i class="fa fa fa-bicycle faa-ring" aria-hidden="true"></i>
+                          硬件
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/category/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa fa-th-large faa-horizontal" aria-hidden="true"></i>
+                    分类
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-vertical" aria-hidden="true"></i>
+                    友链
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-flash" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/about/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-pulse" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="content">
+
+    
+
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/随笔/" title="随笔: 11">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="随笔" style="background-color: #F9EBEA;">随笔
+                        <span class="tag-length">11</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/web/" title="web: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="web" style="background-color: #F5EEF8;">web
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/悦读/" title="悦读: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="悦读" style="background-color: #D5F5E3;">悦读
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Java/" title="Java: 23">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Java" style="background-color: #E8F8F5;">Java
+                        <span class="tag-length">23</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Java基础语法/" title="Java基础语法: 5">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Java基础语法" style="background-color: #FEF9E7;">Java基础语法
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Java异常/" title="Java异常: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Java异常" style="background-color: #F8F9F9;">Java异常
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Java数组/" title="Java数组: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Java数组" style="background-color: #82E0AA;">Java数组
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Java方法/" title="Java方法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Java方法" style="background-color: #D7BDE2;">Java方法
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Java流程控制/" title="Java流程控制: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Java流程控制" style="background-color: #A3E4D7;">Java流程控制
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Java特性/" title="Java特性: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Java特性" style="background-color: #85C1E9;">Java特性
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Java面向对象/" title="Java面向对象: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Java面向对象" style="background-color: #F8C471;">Java面向对象
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Markdown/" title="Markdown: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Markdown" style="background-color: #F9E79F;">Markdown
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/WP/" title="WP: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="WP" style="background-color: #A3E4D7;">WP
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/git/" title="git: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="git" style="background-color: #F8F9F9;">git
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Dos/" title="Dos: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Dos" style="background-color: #FEF9E7;">Dos
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/排序算法/" title="排序算法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="排序算法" style="background-color: #F5EEF8;">排序算法
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Android/" title="Android: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Android" style="background-color: #F9EBEA;">Android
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/硬件/" title="硬件: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="硬件" style="background-color: #F9E79F;">硬件
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/设计模式/" title="设计模式: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="设计模式" style="background-color: #85C1E9;">设计模式
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wallleap/cdn/css/jqcloud.css">
+<style type="text/css">
+    #tag-wordcloud {
+        width: 100%;
+        height: 300px;
+    }
+</style>
+
+<div class="container" data-aos="fade-up">
+    <div class="card">
+        <div id="tag-wordcloud" class="card-content"></div>
+    </div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/jqcloud-1.0.4.js"></script>
+<script type="text/javascript">
+    
+
+    $('#tag-wordcloud').jQCloud([{"text":"随笔","weight":11,"link":"/tags/随笔/"},{"text":"web","weight":1,"link":"/tags/web/"},{"text":"悦读","weight":1,"link":"/tags/悦读/"},{"text":"Java","weight":23,"link":"/tags/Java/"},{"text":"Java基础语法","weight":5,"link":"/tags/Java基础语法/"},{"text":"Java异常","weight":2,"link":"/tags/Java异常/"},{"text":"Java数组","weight":3,"link":"/tags/Java数组/"},{"text":"Java方法","weight":1,"link":"/tags/Java方法/"},{"text":"Java流程控制","weight":3,"link":"/tags/Java流程控制/"},{"text":"Java特性","weight":1,"link":"/tags/Java特性/"},{"text":"Java面向对象","weight":4,"link":"/tags/Java面向对象/"},{"text":"Markdown","weight":1,"link":"/tags/Markdown/"},{"text":"WP","weight":1,"link":"/tags/WP/"},{"text":"git","weight":2,"link":"/tags/git/"},{"text":"Dos","weight":1,"link":"/tags/Dos/"},{"text":"排序算法","weight":1,"link":"/tags/排序算法/"},{"text":"Android","weight":2,"link":"/tags/Android/"},{"text":"硬件","weight":1,"link":"/tags/硬件/"},{"text":"设计模式","weight":2,"link":"/tags/设计模式/"}], {
+        autoResize: true
+    });
 </script>
 
 
+</main>
 
-
-      <div class="single-reward">
-        <div class="reward-open">赏
-          <div class="reward-main">
-            <ul class="reward-row">
-              <li class="alipay-code"><img src="/img/custom/donate/AliPayQR.jpg"></li>
-              <li class="wechat-code"><img src="/img/custom/donate/WeChanQR.jpg"></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-      <footer class="post-footer">
-        <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-        <div class="post-tags">
-        </div>
-        <div class="post-share">
-          <div class="social-share sharehidden share-component"></div>
-          <i class="iconfont show-share icon-forward"></i>
-        </div>
-      </footer><!-- .entry-footer -->
-    </article>
-      <!-- #post-## -->
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="/about/" class="profile gravatar"><img src="/img/custom/avatar.jpg" itemprop="image" alt="Rookie_l's Bolg" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-            <a href="https://hiheya.github.io/" itemprop="url" rel="author">Rookie_l's Bolg</a>
-            </h3>
-          </div>
-        </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i>与君共赴，万里征程。</p>
-      </section>
-  </div><!-- #primary -->
-</div>
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
@@ -500,13 +864,33 @@
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
       </div>
+      <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+      <script>
+        var now = new Date();
+        function createtime() {
+          var grt= new Date("08/22/2022 16:44:00");//此处修改你的建站时间或者网站上线时间
+          now.setTime(now.getTime()+250);
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+          document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 ";
+          document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+        }
+        setInterval("createtime()",250);
+      </script>
       <p style="color: #666666;">Copyright 2022 Rookie_l, All Rights Reserved.</p>
     </div>
     <div class="footer-device">
-    <p style="font-family: 'Ubuntu', sans-serif;">
-        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
-        </span>
+      <p>
+        <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> <a href="https://icu007.work" data-pjax-state=""> Rookie_l </a>  •  <a href="https://beian.miit.gov.cn/" target="_blank">  赣ICP备2022002260号  </a>
       </p>
+    <!-- <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;"><i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> <a href="https://icu007.work" data-pjax-state=""> Rookie_l </a>  •  <a href="https://beian.miit.gov.cn/" target="_blank">  赣ICP备2022002260号  </a>
+        </span>
+      </p> -->
     </div>
   </div><!-- .site-info -->
 </footer>
@@ -617,7 +1001,7 @@ $(document).ready(function() {
       <li>
         <a href="/archive">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            <i class="fa  fa-archive faa-wrench" aria-hidden="true"></i>
             归档
           </span>
         </a>
@@ -659,7 +1043,7 @@ $(document).ready(function() {
       <li>
         <a href="javascript:;">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            <i class="fa  fa-list-ul faa-float" aria-hidden="true"></i>
             清单
           </span>
         </a>
@@ -675,7 +1059,7 @@ $(document).ready(function() {
             
               <li>
                 <a href="/bangumi/">
-                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  <i class="fa fa-film faa-passing" aria-hidden="true"></i>
                   番组
                 </a>
               </li>
@@ -692,9 +1076,9 @@ $(document).ready(function() {
       </li>
     
       <li>
-        <a href="javascript:;">
+        <a href="/tags/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa fa-bookmark" aria-hidden="true"></i>
+            <i class="fa  fa fa-bookmark faa-ring" aria-hidden="true"></i>
             标签
           </span>
         </a>
@@ -703,35 +1087,28 @@ $(document).ready(function() {
             
               <li>
                 <a href="/tags/Java/">
-                  <i class="fa fa-code" aria-hidden="true"></i>
+                  <i class="fa fa-code faa-burst" aria-hidden="true"></i>
                   Java
                 </a>
               </li>
             
               <li>
                 <a href="/tags/随笔/">
-                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  <i class="fa fa-file-text-o faa-falling" aria-hidden="true"></i>
                   随笔
                 </a>
               </li>
             
               <li>
-                <a href="/tags/Markdown/">
-                  <i class="fa fa fa-list-alt" aria-hidden="true"></i>
-                  M-D
-                </a>
-              </li>
-            
-              <li>
                 <a href="/tags/WordPress/">
-                  <i class="fa fa fa-file-o" aria-hidden="true"></i>
+                  <i class="fa fa fa-file-o faa-rising" aria-hidden="true"></i>
                   WP
                 </a>
               </li>
             
               <li>
                 <a href="/tags/硬件/">
-                  <i class="fa fa fa-bicycle" aria-hidden="true"></i>
+                  <i class="fa fa fa-bicycle faa-ring" aria-hidden="true"></i>
                   硬件
                 </a>
               </li>
@@ -741,10 +1118,20 @@ $(document).ready(function() {
       </li>
     
       <li>
+        <a href="/category/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa fa-th-large faa-horizontal" aria-hidden="true"></i>
+            分类
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
         <a href="/comment/">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
-            留言板
+            留言
           </span>
         </a>
         
@@ -753,8 +1140,8 @@ $(document).ready(function() {
       <li>
         <a href="/links/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-            友人帐
+            <i class="fa  fa-link faa-vertical" aria-hidden="true"></i>
+            友链
           </span>
         </a>
         
@@ -763,7 +1150,7 @@ $(document).ready(function() {
       <li>
         <a href="/donate/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            <i class="fa  fa-heart faa-flash" aria-hidden="true"></i>
             赞赏
           </span>
         </a>
@@ -773,7 +1160,7 @@ $(document).ready(function() {
       <li>
         <a href="/about/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            <i class="fa  fa-leaf faa-pulse" aria-hidden="true"></i>
             关于
           </span>
         </a>
@@ -849,9 +1236,18 @@ $(document).ready(function() {
   });
 </script>
   
-  <script src= /js/shehuizhuyi.js></script>
+  <!-- 网站标题恶搞 -->
   <script src= /js/hititle.js></script>
+  <!-- 点击显示社会主义核心价值观和爱心 -->
+  <script src= /js/shehuizhuyi.js></script>
+  <script src= /js/love.js></script>
+  <!-- 背景添加动态线条，随鼠标动 -->
+  <script src= /js/canvas-nest.min.js></script>
+  <!-- 背景显示飘动的彩带 -->
+  <script src= /js/piao.js></script>
+  <!-- 樱花飘落特效 -->
   <script src= /js/sakura.js></script>
+  <!-- 禁止鼠标右键以及F12 -->
   <script src= /js/noSomeKey.js></script>
 
   <!-- 实现换肤功能 -->
@@ -910,7 +1306,7 @@ $(document).ready(function() {
       <li>
         <a href="/archive">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            <i class="fa  fa-archive faa-wrench" aria-hidden="true"></i>
             归档
           </span>
         </a>
@@ -952,7 +1348,7 @@ $(document).ready(function() {
       <li>
         <a href="javascript:;">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            <i class="fa  fa-list-ul faa-float" aria-hidden="true"></i>
             清单
           </span>
         </a>
@@ -968,7 +1364,7 @@ $(document).ready(function() {
             
               <li>
                 <a href="/bangumi/">
-                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  <i class="fa fa-film faa-passing" aria-hidden="true"></i>
                   番组
                 </a>
               </li>
@@ -985,9 +1381,9 @@ $(document).ready(function() {
       </li>
     
       <li>
-        <a href="javascript:;">
+        <a href="/tags/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa fa-bookmark" aria-hidden="true"></i>
+            <i class="fa  fa fa-bookmark faa-ring" aria-hidden="true"></i>
             标签
           </span>
         </a>
@@ -996,35 +1392,28 @@ $(document).ready(function() {
             
               <li>
                 <a href="/tags/Java/">
-                  <i class="fa fa-code" aria-hidden="true"></i>
+                  <i class="fa fa-code faa-burst" aria-hidden="true"></i>
                   Java
                 </a>
               </li>
             
               <li>
                 <a href="/tags/随笔/">
-                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  <i class="fa fa-file-text-o faa-falling" aria-hidden="true"></i>
                   随笔
                 </a>
               </li>
             
               <li>
-                <a href="/tags/Markdown/">
-                  <i class="fa fa fa-list-alt" aria-hidden="true"></i>
-                  M-D
-                </a>
-              </li>
-            
-              <li>
                 <a href="/tags/WordPress/">
-                  <i class="fa fa fa-file-o" aria-hidden="true"></i>
+                  <i class="fa fa fa-file-o faa-rising" aria-hidden="true"></i>
                   WP
                 </a>
               </li>
             
               <li>
                 <a href="/tags/硬件/">
-                  <i class="fa fa fa-bicycle" aria-hidden="true"></i>
+                  <i class="fa fa fa-bicycle faa-ring" aria-hidden="true"></i>
                   硬件
                 </a>
               </li>
@@ -1034,10 +1423,20 @@ $(document).ready(function() {
       </li>
     
       <li>
+        <a href="/category/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa fa-th-large faa-horizontal" aria-hidden="true"></i>
+            分类
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
         <a href="/comment/">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
-            留言板
+            留言
           </span>
         </a>
         
@@ -1046,8 +1445,8 @@ $(document).ready(function() {
       <li>
         <a href="/links/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-            友人帐
+            <i class="fa  fa-link faa-vertical" aria-hidden="true"></i>
+            友链
           </span>
         </a>
         
@@ -1056,7 +1455,7 @@ $(document).ready(function() {
       <li>
         <a href="/donate/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            <i class="fa  fa-heart faa-flash" aria-hidden="true"></i>
             赞赏
           </span>
         </a>
@@ -1066,7 +1465,7 @@ $(document).ready(function() {
       <li>
         <a href="/about/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            <i class="fa  fa-leaf faa-pulse" aria-hidden="true"></i>
             关于
           </span>
         </a>

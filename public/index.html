@@ -89,7 +89,9 @@
         </a>
       </div>
       <div class="header-info">
-        <p>与君共赴，万里征程。</p>
+        <!-- <p>与君共赴，万里征程。</p> -->
+        <p id="jinrishici-sentence">正在加载今日诗词....</p>
+        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         <div class="top-social_v2">
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
@@ -215,7 +217,7 @@
               <li>
                 <a href="/archive">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    <i class="fa  fa-archive faa-wrench" aria-hidden="true"></i>
                     归档
                   </span>
                 </a>
@@ -257,7 +259,7 @@
               <li>
                 <a href="javascript:;">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    <i class="fa  fa-list-ul faa-float" aria-hidden="true"></i>
                     清单
                   </span>
                 </a>
@@ -273,7 +275,7 @@
                     
                       <li>
                         <a href="/bangumi/">
-                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          <i class="fa fa-film faa-passing" aria-hidden="true"></i>
                           番组
                         </a>
                       </li>
@@ -290,9 +292,9 @@
               </li>
             
               <li>
-                <a href="javascript:;">
+                <a href="/tags/">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa fa-bookmark" aria-hidden="true"></i>
+                    <i class="fa  fa fa-bookmark faa-ring" aria-hidden="true"></i>
                     标签
                   </span>
                 </a>
@@ -301,35 +303,28 @@
                     
                       <li>
                         <a href="/tags/Java/">
-                          <i class="fa fa-code" aria-hidden="true"></i>
+                          <i class="fa fa-code faa-burst" aria-hidden="true"></i>
                           Java
                         </a>
                       </li>
                     
                       <li>
                         <a href="/tags/随笔/">
-                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          <i class="fa fa-file-text-o faa-falling" aria-hidden="true"></i>
                           随笔
                         </a>
                       </li>
                     
                       <li>
-                        <a href="/tags/Markdown/">
-                          <i class="fa fa fa-list-alt" aria-hidden="true"></i>
-                          M-D
-                        </a>
-                      </li>
-                    
-                      <li>
                         <a href="/tags/WordPress/">
-                          <i class="fa fa fa-file-o" aria-hidden="true"></i>
+                          <i class="fa fa fa-file-o faa-rising" aria-hidden="true"></i>
                           WP
                         </a>
                       </li>
                     
                       <li>
                         <a href="/tags/硬件/">
-                          <i class="fa fa fa-bicycle" aria-hidden="true"></i>
+                          <i class="fa fa fa-bicycle faa-ring" aria-hidden="true"></i>
                           硬件
                         </a>
                       </li>
@@ -339,10 +334,20 @@
               </li>
             
               <li>
+                <a href="/category/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa fa-th-large faa-horizontal" aria-hidden="true"></i>
+                    分类
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
                 <a href="/comment/">
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
-                    留言板
+                    留言
                   </span>
                 </a>
                 
@@ -351,8 +356,8 @@
               <li>
                 <a href="/links/">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-                    友人帐
+                    <i class="fa  fa-link faa-vertical" aria-hidden="true"></i>
+                    友链
                   </span>
                 </a>
                 
@@ -361,7 +366,7 @@
               <li>
                 <a href="/donate/">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    <i class="fa  fa-heart faa-flash" aria-hidden="true"></i>
                     赞赏
                   </span>
                 </a>
@@ -371,7 +376,7 @@
               <li>
                 <a href="/about/">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    <i class="fa  fa-leaf faa-pulse" aria-hidden="true"></i>
                     关于
                   </span>
                 </a>
@@ -388,17 +393,41 @@
       <div class="blank" style="padding-top: 0px;"></div>
 <div id="content" class="site-content">
   
-  <div class="notice" style="margin-top:60px">
+    <div class="notice" style="margin-top:60px">
+      <i class="iconfont icon-notification">
+      </i>
+      <div class="notice-content/n">本博客为了美观，文章头图均与正文无关。</div>
+    <span id="hitokoto" style="margin-left:5px;"> :D 获取中...</span>
+      <p align="right" id="afrom"></p>
+      <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+      <script>
+        fetch('https://v1.hitokoto.cn/?c=h')
+          .then(function (res){
+            return res.json();
+          })
+          .then(function (data) {
+            var hitokoto = document.getElementById('hitokoto');
+            var afrom = document.getElementById('afrom');
+            hitokoto.innerText = data.hitokoto;
+            afrom.innerText =  '——【' + data.from + ' ' + data.from_who + '】';
+          })
+          .catch(function (err) {
+            console.error(err);
+          })
+      </script>
+      </div>
+  <!-- <div class="notice" style="margin-top:60px">
     <i class="iconfont icon-notification">
     </i>
-    <div class="notice-content">欢迎来到我的秘密小屋...</div>
-  </div>
+    <div class="notice-content">本博客为了美观，文章头图均与正文无关。</div>
+  </div> -->
   
   <div class="top-feature-row">
   <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-paper-plane-o" aria-hidden="true">
-  </i>
-  开往</h1>
+    <i class="iconfont icon-sakura rotating" style="color: #efa3b0;display: inline-block;font-size:18px">
+    </i>&nbsp;网站跳转
+  </h1>
   
   <div class="top-feature-v2">
     <div class="the-feature square from_left_and_right">
@@ -445,14 +474,304 @@
 </div>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      博客</h1>
+      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;font-weight: 800;">
+        <i class="iconfont icon-sakura rotating" style="color: #efa3b0;display: inline-block;font-size:18px"></i>&nbsp;最新文章
+      </h1>
+
       
   <!-- 首页默认取最最新文章集 -->
   
     
 <article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2022/08/26/fenxiandroidxiangmuyunxing/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva1.sinaimg.cn/large/87c01ec7gy1fsnqqsspxqj21kw0w0to4.jpg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2022-8-26 11:08</div>
+      <a href="/2022/08/26/fenxiandroidxiangmuyunxing/" class="post-title">
+        <h3>分析Android项目运行</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="/2022/08/26/fenxiandroidxiangmuyunxing/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2022/08/26/diyigeandroidchengxu/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva1.sinaimg.cn/large/87c01ec7gy1fsnqr4nyw5j21kw0w0e07.jpg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2022-8-26 11:08</div>
+      <a href="/2022/08/26/diyigeandroidchengxu/" class="post-title">
+        <h3>第一个Android程序</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+            <a href="/tags/随笔/">随笔<em>·</em></a>
+          
+            <a href="/tags/Android/">Android<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="/2022/08/26/diyigeandroidchengxu/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2022/08/26/xraymianbananzhuang/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqqrzat4j21kw0w0wtr.jpg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2022-8-26 11:08</div>
+      <a href="/2022/08/26/xraymianbananzhuang/" class="post-title">
+        <h3>xray面板安装</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+            <a href="/tags/随笔/">随笔<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="/2022/08/26/xraymianbananzhuang/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2022/08/26/yuzhuangappanzhuangguocheng/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva1.sinaimg.cn/large/87c01ec7gy1fsnqqxw2orj21kw0w01a9.jpg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2022-8-26 11:08</div>
+      <a href="/2022/08/26/yuzhuangappanzhuangguocheng/" class="post-title">
+        <h3>预装APP安装过程</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+            <a href="/tags/随笔/">随笔<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="/2022/08/26/yuzhuangappanzhuangguocheng/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2022/08/26/fontawesomeanimationgegetubiaoxiaoguo/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva1.sinaimg.cn/large/87c01ec7gy1fsnqqxw2orj21kw0w01a9.jpg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2022-8-26 11:08</div>
+      <a href="/2022/08/26/fontawesomeanimationgegetubiaoxiaoguo/" class="post-title">
+        <h3>Font-Awesome-Animation各个图标效果</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+            <a href="/tags/随笔/">随笔<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/资源/">资源</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="/2022/08/26/fontawesomeanimationgegetubiaoxiaoguo/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2022/08/26/jidigongsikaifahuanjingdajian/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva2.sinaimg.cn/large/87c01ec7gy1fsnqqlxbtmj21kw0w0aoq.jpg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2022-8-26 11:08</div>
+      <a href="/2022/08/26/jidigongsikaifahuanjingdajian/" class="post-title">
+        <h3>记第公司开发环境搭建</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+            <a href="/tags/随笔/">随笔<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/资源/">资源</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="/2022/08/26/jidigongsikaifahuanjingdajian/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2022/08/26/jidiyiciwanchengyewuxuqiu/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva1.sinaimg.cn/large/87c01ec7gy1fsnqqpnzy1j21kw0w0wtu.jpg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2022-8-26 11:08</div>
+      <a href="/2022/08/26/jidiyiciwanchengyewuxuqiu/" class="post-title">
+        <h3>记第一次完成业务需求</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+            <a href="/tags/随笔/">随笔<em>·</em></a>
+          
+            <a href="/tags/git/">git<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="/2022/08/26/jidiyiciwanchengyewuxuqiu/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
   <div class="post-thumb">
     <a href="/2022/08/26/gitpushshichongtujiejuefangfa/">
@@ -470,9 +789,9 @@
       <div class="post-meta">
         <span><i class="fa fa-tags"></i>
         
-            <a href="/tags/git/">git<em>·</em></a>
-          
             <a href="/tags/随笔/">随笔<em>·</em></a>
+          
+            <a href="/tags/git/">git<em>·</em></a>
           
         </span>
         <span>
@@ -495,7 +814,7 @@
 </article>
   
     
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
   <div class="post-thumb">
     <a href="/2022/08/25/wpbeifen/">
@@ -536,7 +855,7 @@
 </article>
   
     
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
   <div class="post-thumb">
     <a href="/2022/08/25/jiyiciofficewufalianwangjiejuefangfa/">
@@ -576,307 +895,6 @@
   </div>
 </article>
   
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/08/25/shejimoshizhijiegouxingmoshi/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqquygqlj21kw0w04f5.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-8-25 22:08</div>
-      <a href="/2022/08/25/shejimoshizhijiegouxingmoshi/" class="post-title">
-        <h3>设计模式之结构型模式</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Java/">Java<em>·</em></a>
-          
-            <a href="/tags/设计模式/">设计模式<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2022/08/25/shejimoshizhijiegouxingmoshi/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/08/25/shejimoshizhichuangjianzhemoshi/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqquygqlj21kw0w04f5.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-8-25 22:08</div>
-      <a href="/2022/08/25/shejimoshizhichuangjianzhemoshi/" class="post-title">
-        <h3>设计模式之创建者模式</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Java/">Java<em>·</em></a>
-          
-            <a href="/tags/设计模式/">设计模式<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2022/08/25/shejimoshizhichuangjianzhemoshi/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/08/25/paixusuanfa/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva2.sinaimg.cn/large/87c01ec7gy1fsnqqi081jj21kw0w04cl.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-8-25 22:08</div>
-      <a href="/2022/08/25/paixusuanfa/" class="post-title">
-        <h3>排序算法</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Java/">Java<em>·</em></a>
-          
-            <a href="/tags/排序算法/">排序算法<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2022/08/25/paixusuanfa/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/08/25/javajichuxiaojie/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqqshib2j21kw0w0apc.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-8-25 22:08</div>
-      <a href="/2022/08/25/javajichuxiaojie/" class="post-title">
-        <h3>Java基础小结</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Java/">Java<em>·</em></a>
-          
-            <a href="/tags/Java基础语法/">Java基础语法<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2022/08/25/javajichuxiaojie/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/08/25/javayichang02/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva2.sinaimg.cn/large/87c01ec7gy1fsnqqyk36yj21kw0w0k97.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-8-25 22:08</div>
-      <a href="/2022/08/25/javayichang02/" class="post-title">
-        <h3>Java异常02</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Java/">Java<em>·</em></a>
-          
-            <a href="/tags/Java异常/">Java异常<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2022/08/25/javayichang02/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/08/25/javayichang01/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva2.sinaimg.cn/large/87c01ec7gy1fsnqqyk36yj21kw0w0k97.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-8-25 22:08</div>
-      <a href="/2022/08/25/javayichang01/" class="post-title">
-        <h3>Java异常01</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Java/">Java<em>·</em></a>
-          
-            <a href="/tags/Java异常/">Java异常<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2022/08/25/javayichang01/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/08/25/javamianxiangduixiang04/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/hiheya/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://tva3.sinaimg.cn/large/87c01ec7gy1fsnqqm6x00j21kw0w0h09.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-8-25 22:08</div>
-      <a href="/2022/08/25/javamianxiangduixiang04/" class="post-title">
-        <h3>Java面向对象04</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Java/">Java<em>·</em></a>
-          
-            <a href="/tags/Java面向对象/">Java面向对象<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2022/08/25/javamianxiangduixiang04/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
 
 
     </main>
@@ -889,7 +907,7 @@
      -->
   </div>
   
-    <div id="pagination"><a href="/page/2/" class="">Previous</a></div>
+    <div id="pagination"><a href="/page/2/" class="">更多文章</a></div>
   
 </div>
 
@@ -937,13 +955,33 @@
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
       </div>
+      <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+      <script>
+        var now = new Date();
+        function createtime() {
+          var grt= new Date("08/22/2022 16:44:00");//此处修改你的建站时间或者网站上线时间
+          now.setTime(now.getTime()+250);
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+          document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 ";
+          document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+        }
+        setInterval("createtime()",250);
+      </script>
       <p style="color: #666666;">Copyright 2022 Rookie_l, All Rights Reserved.</p>
     </div>
     <div class="footer-device">
-    <p style="font-family: 'Ubuntu', sans-serif;">
-        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
-        </span>
+      <p>
+        <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> <a href="https://icu007.work" data-pjax-state=""> Rookie_l </a>  •  <a href="https://beian.miit.gov.cn/" target="_blank">  赣ICP备2022002260号  </a>
       </p>
+    <!-- <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;"><i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> <a href="https://icu007.work" data-pjax-state=""> Rookie_l </a>  •  <a href="https://beian.miit.gov.cn/" target="_blank">  赣ICP备2022002260号  </a>
+        </span>
+      </p> -->
     </div>
   </div><!-- .site-info -->
 </footer>
@@ -1054,7 +1092,7 @@ $(document).ready(function() {
       <li>
         <a href="/archive">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            <i class="fa  fa-archive faa-wrench" aria-hidden="true"></i>
             归档
           </span>
         </a>
@@ -1096,7 +1134,7 @@ $(document).ready(function() {
       <li>
         <a href="javascript:;">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            <i class="fa  fa-list-ul faa-float" aria-hidden="true"></i>
             清单
           </span>
         </a>
@@ -1112,7 +1150,7 @@ $(document).ready(function() {
             
               <li>
                 <a href="/bangumi/">
-                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  <i class="fa fa-film faa-passing" aria-hidden="true"></i>
                   番组
                 </a>
               </li>
@@ -1129,9 +1167,9 @@ $(document).ready(function() {
       </li>
     
       <li>
-        <a href="javascript:;">
+        <a href="/tags/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa fa-bookmark" aria-hidden="true"></i>
+            <i class="fa  fa fa-bookmark faa-ring" aria-hidden="true"></i>
             标签
           </span>
         </a>
@@ -1140,35 +1178,28 @@ $(document).ready(function() {
             
               <li>
                 <a href="/tags/Java/">
-                  <i class="fa fa-code" aria-hidden="true"></i>
+                  <i class="fa fa-code faa-burst" aria-hidden="true"></i>
                   Java
                 </a>
               </li>
             
               <li>
                 <a href="/tags/随笔/">
-                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  <i class="fa fa-file-text-o faa-falling" aria-hidden="true"></i>
                   随笔
                 </a>
               </li>
             
               <li>
-                <a href="/tags/Markdown/">
-                  <i class="fa fa fa-list-alt" aria-hidden="true"></i>
-                  M-D
-                </a>
-              </li>
-            
-              <li>
                 <a href="/tags/WordPress/">
-                  <i class="fa fa fa-file-o" aria-hidden="true"></i>
+                  <i class="fa fa fa-file-o faa-rising" aria-hidden="true"></i>
                   WP
                 </a>
               </li>
             
               <li>
                 <a href="/tags/硬件/">
-                  <i class="fa fa fa-bicycle" aria-hidden="true"></i>
+                  <i class="fa fa fa-bicycle faa-ring" aria-hidden="true"></i>
                   硬件
                 </a>
               </li>
@@ -1178,10 +1209,20 @@ $(document).ready(function() {
       </li>
     
       <li>
+        <a href="/category/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa fa-th-large faa-horizontal" aria-hidden="true"></i>
+            分类
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
         <a href="/comment/">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
-            留言板
+            留言
           </span>
         </a>
         
@@ -1190,8 +1231,8 @@ $(document).ready(function() {
       <li>
         <a href="/links/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-            友人帐
+            <i class="fa  fa-link faa-vertical" aria-hidden="true"></i>
+            友链
           </span>
         </a>
         
@@ -1200,7 +1241,7 @@ $(document).ready(function() {
       <li>
         <a href="/donate/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            <i class="fa  fa-heart faa-flash" aria-hidden="true"></i>
             赞赏
           </span>
         </a>
@@ -1210,7 +1251,7 @@ $(document).ready(function() {
       <li>
         <a href="/about/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            <i class="fa  fa-leaf faa-pulse" aria-hidden="true"></i>
             关于
           </span>
         </a>
@@ -1286,9 +1327,18 @@ $(document).ready(function() {
   });
 </script>
   
-  <script src= /js/shehuizhuyi.js></script>
+  <!-- 网站标题恶搞 -->
   <script src= /js/hititle.js></script>
+  <!-- 点击显示社会主义核心价值观和爱心 -->
+  <script src= /js/shehuizhuyi.js></script>
+  <script src= /js/love.js></script>
+  <!-- 背景添加动态线条，随鼠标动 -->
+  <script src= /js/canvas-nest.min.js></script>
+  <!-- 背景显示飘动的彩带 -->
+  <script src= /js/piao.js></script>
+  <!-- 樱花飘落特效 -->
   <script src= /js/sakura.js></script>
+  <!-- 禁止鼠标右键以及F12 -->
   <script src= /js/noSomeKey.js></script>
 
   <!-- 实现换肤功能 -->
@@ -1347,7 +1397,7 @@ $(document).ready(function() {
       <li>
         <a href="/archive">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            <i class="fa  fa-archive faa-wrench" aria-hidden="true"></i>
             归档
           </span>
         </a>
@@ -1389,7 +1439,7 @@ $(document).ready(function() {
       <li>
         <a href="javascript:;">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            <i class="fa  fa-list-ul faa-float" aria-hidden="true"></i>
             清单
           </span>
         </a>
@@ -1405,7 +1455,7 @@ $(document).ready(function() {
             
               <li>
                 <a href="/bangumi/">
-                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  <i class="fa fa-film faa-passing" aria-hidden="true"></i>
                   番组
                 </a>
               </li>
@@ -1422,9 +1472,9 @@ $(document).ready(function() {
       </li>
     
       <li>
-        <a href="javascript:;">
+        <a href="/tags/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa fa-bookmark" aria-hidden="true"></i>
+            <i class="fa  fa fa-bookmark faa-ring" aria-hidden="true"></i>
             标签
           </span>
         </a>
@@ -1433,35 +1483,28 @@ $(document).ready(function() {
             
               <li>
                 <a href="/tags/Java/">
-                  <i class="fa fa-code" aria-hidden="true"></i>
+                  <i class="fa fa-code faa-burst" aria-hidden="true"></i>
                   Java
                 </a>
               </li>
             
               <li>
                 <a href="/tags/随笔/">
-                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  <i class="fa fa-file-text-o faa-falling" aria-hidden="true"></i>
                   随笔
                 </a>
               </li>
             
               <li>
-                <a href="/tags/Markdown/">
-                  <i class="fa fa fa-list-alt" aria-hidden="true"></i>
-                  M-D
-                </a>
-              </li>
-            
-              <li>
                 <a href="/tags/WordPress/">
-                  <i class="fa fa fa-file-o" aria-hidden="true"></i>
+                  <i class="fa fa fa-file-o faa-rising" aria-hidden="true"></i>
                   WP
                 </a>
               </li>
             
               <li>
                 <a href="/tags/硬件/">
-                  <i class="fa fa fa-bicycle" aria-hidden="true"></i>
+                  <i class="fa fa fa-bicycle faa-ring" aria-hidden="true"></i>
                   硬件
                 </a>
               </li>
@@ -1471,10 +1514,20 @@ $(document).ready(function() {
       </li>
     
       <li>
+        <a href="/category/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa fa-th-large faa-horizontal" aria-hidden="true"></i>
+            分类
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
         <a href="/comment/">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
-            留言板
+            留言
           </span>
         </a>
         
@@ -1483,8 +1536,8 @@ $(document).ready(function() {
       <li>
         <a href="/links/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-            友人帐
+            <i class="fa  fa-link faa-vertical" aria-hidden="true"></i>
+            友链
           </span>
         </a>
         
@@ -1493,7 +1546,7 @@ $(document).ready(function() {
       <li>
         <a href="/donate/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            <i class="fa  fa-heart faa-flash" aria-hidden="true"></i>
             赞赏
           </span>
         </a>
@@ -1503,7 +1556,7 @@ $(document).ready(function() {
       <li>
         <a href="/about/">
           <span class="faa-parent animated-hover">
-            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            <i class="fa  fa-leaf faa-pulse" aria-hidden="true"></i>
             关于
           </span>
         </a>
