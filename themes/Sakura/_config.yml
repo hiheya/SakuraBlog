@@ -6,7 +6,7 @@ copyright:
 
 # site name
 prefixName: 🐼
-siteName: Rookie_l's Bolg
+siteName: Rookie_l's Blog
 # favicon and site master avatar
 favicon: https://icu007.work/wp-content/uploads/2022/08/cropped-cropped-icno.png
 avatar: /img/custom/avatar.jpg
@@ -139,3 +139,7 @@ waline:
   placeholder: 祝开开心心！ # Comment Box placeholder
   requiredFields: [ 'nick','mail' ] #设置必填项
   background: https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich2.gif #输入框提示动画
+
+  # 是否开启字数统计
+	#不需要使用，直接设置值为false，或注释掉
+	word_count: true

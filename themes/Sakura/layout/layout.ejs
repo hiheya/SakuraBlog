@@ -36,7 +36,11 @@
   <script src= /js/sakura.js></script>
   <!-- 禁止鼠标右键以及F12 -->
   <script src= /js/noSomeKey.js></script>
-
+  <!-- 预加载 -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <!-- 引入卜算子 -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
   <!-- 实现换肤功能 -->
   <%- partial('_partial/skin-list') %> 
   <%- partial('_partial/skin-btn', null, {cache: !config.relative_link}) %>
