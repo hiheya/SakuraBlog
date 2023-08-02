@@ -6,12 +6,13 @@ authorLink: 'https://hiheya.github.io/'
 categories: 技术
 comments: true
 photos: 'https://tva3.sinaimg.cn/large/87c01ec7gy1fsnqqm6x00j21kw0w0h09.jpg'
+tags:
+  - Java
+  - Java面向对象
+abbrlink: cc6f4b97
 date: 2022-08-25 22:41:42
 authorAbout:
 authorDesc:
-tags:
-- Java
-- Java面向对象
 keywords:
 description:
 ---

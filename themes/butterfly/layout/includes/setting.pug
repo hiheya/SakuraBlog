@@ -1,0 +1,227 @@
+html
+body
+    #settingWindow.js-pjax
+        span.setting-title 
+            span#stt 控制面板
+            a(id="close-console" onclick="toggleWinbox();") ×
+        button#backer(onclick='$(\'.asetting\').hide();$(\'.settingx\').show();$(\'#backer\').hide()')
+            i.fa.fa-chevron-left
+            span 返回
+        .settings
+            #setting-buttons
+                button.settingx(onclick='$(\'#theme-settings\').show();$(\'.settingx\').hide();$(\'#backer\').show();')
+                    i.fas.fa-layer-group
+                    span 外观
+                button.settingx(onclick='$(\'#font-settings\').show();$(\'.settingx\').hide();$(\'#backer\').show();')
+                    i.fa.fa-font
+                    span 字体
+                button.settingx(onclick='$(\'#background-settings\').show();$(\'.settingx\').hide();$(\'#backer\').show();')
+                    i.far.fa-image
+                    span 背景
+                button.settingx(onclick='$(\'#con-abouts\').show();$(\'.settingx\').hide();$(\'#backer\').show();')
+                    i.fa.fa-cloud-download
+                    span 关于
+            #setting-hides
+                #theme-settings.asetting
+                    h2.content-head 性能设置
+                    p
+                        .content(style='display:flex')
+                            input#blur(type='checkbox', onclick='setBlur()')
+                            .content-text 禁用模糊效果
+                        //- .content(style='display:flex')
+                        //-     input#yjjs(type='checkbox', onclick='yjjs1()')
+                        //-     .content-text 硬件加速
+                    p
+                        h2.content-head 主题设置
+                        //- .content(style='display:flex')
+                        //-     input#hideAside(type='checkbox', onclick='toggleRightside()')
+                        //-     .content-text 隐藏侧边栏
+                        //- .content(style='display:flex')
+                        //-     input#hideAplayer(type='checkbox', onclick='toggleAplayer()')
+                        //-     .content-text 显示aplayer
+                        //- .content(style='display:flex')
+                        //-     input#hideSakura(type='checkbox', onclick='toggleSakuras()')
+                        //-     .content-text 落樱特效
+                        .content(style='display:flex')
+                            input#autoTheme(type='checkbox', onclick='toggleAutoTheme()')
+                            .content-text 明暗模式自动切换
+                        .content(style='display:flex')
+                            input#autoColor(type='checkbox', onclick='autoColor()')
+                            .content-text 自动主题色（跟随文章封面）
+                        //- | 未完工
+                        //- .content(style='display:flex')
+                        //-     input#hideAplayer(type='checkbox', onclick='toggleNav()')
+                        //-     .content-text 固定导航栏
+                        //- | ###
+                        //- .content(style='display:flex')
+                        //-     button.content-button(onclick='switchTheme()') 切换主题
+                          
+                    p
+                        h3.content-head 主题色
+                        #themeColorSettings.content(style='display:flex')
+                            input#red(type='radio', name='colors', onclick='setColor(\'red\')')
+                            input#orange(type='radio', name='colors', onclick='setColor(\'orange\')')
+                            input#yellow(type='radio', name='colors', onclick='setColor(\'yellow\')')
+                            input#green(type='radio', name='colors', onclick='setColor(\'green\')')
+                            input#blue(type='radio', name='colors', onclick='setColor(\'blue\')')
+                            input#heoblue(type='radio', name='colors', onclick='setColor(\'heoblue\')')
+                            input#darkblue(type='radio', name='colors', onclick='setColor(\'darkblue\')')
+                            input#purple(type='radio', name='colors', onclick='setColor(\'purple\')')
+                            input#pink(type='radio', name='colors', onclick='setColor(\'pink\')', checked)
+                            input#black(type='radio', name='colors', onclick='setColor(\'black\')')
+                            input#blackgray(type='radio', name='colors', onclick='setColor(\'blackgray\')')
+                #font-settings.asetting
+                    h2.content-head 字体设置
+                    p#swfs
+                        a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:\'HYTMR\'!important;color:black', onclick='setFont(\'HYTMR\')') 汉仪唐美人
+                        br
+                        a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:\'HYPailou\'!important;color:black', onclick='setFont(\'HYPailou\')') 汉仪新蒂牌楼
+                        br
+                        a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:\'FZXJLJ\'!important;color:black', onclick='setFont(\'FZXJLJ\')') 方正金陵体
+                        br
+                        a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:\'FZXS\'!important;color:black', onclick='setFont(\'FZXS\')') 方正像素体
+                        br
+                        a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:\'ZhuZiAWan\'!important;color:black', onclick='setFont(\'ZhuZiAWan\')') 筑紫A丸ゴシック
+                        br
+                        a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:\'FZODZK\'!important;color:black', onclick='setFont(\'FZODZK\')') 方正欧蝶正楷
+                        br
+                        a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:\'Source Serif\'!important;color:black', onclick='setFont(\'Source Serif\')') 思源宋体
+                        br
+                        a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:\'Source Sans\'!important;color:black', onclick='setFont(\'Source Sans\')') 思源黑体
+                        br
+                        a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:-apple-system, IBM Plex Mono ,monosapce,\'微软雅黑\', sans-serif;', onclick='setFont(\'main\')') 系统默认
+                        br
+                #background-settings.asetting
+                    h2(style='margin-left:10px') 背景设置
+                    div
+                    span 注意:切换背景功能仅在Acrylic主题中生效，在Simple主题中无效
+                    button.content-button(onclick='localStorage.removeItem(\'blogbg\');location.reload();')
+                        i.fa-solid.fa-arrows-rotate
+                        span  点我恢复默认背景
+                    button.content-button(onclick='switchTheme()') 切换主题
+                    h3 渐变色
+                    //- .bgbox
+                    //-     a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to right, #eecda3, #ef629f)\')')
+                    //-         img(style='background: linear-gradient(to right, #eecda3, #ef629f); width: 100px; height: 100px;')
+                    //-     a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to right, #B7D31E, #42CE1E)\')')
+                    //-         img(style='background: linear-gradient(to right, #B7D31E, #42CE1E); width: 100px; height: 100px;')
+                    .bgbox
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)\')')
+                            img(src="/img/setting/img1.png", alt="温柔的火焰", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)\')')
+                            img(src="/img/setting/img2.png", alt="褪色的夕阳", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to top,#fad0c4 0%,#fad0c4 1%,#ffd1ff 100%)\')')
+                            img(src="/img/setting/img3.png", alt="春天的温暖", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)\')')
+                            img(src="/img/setting/img4.png", alt="美味的水蜜桃", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)\')')
+                            img(src="/img/setting/img5.png", alt="嘴唇", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)\')')
+                            img(src="/img/setting/img6.png", alt="夕阳下的雨", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%)\')')
+                            img(src="/img/setting/img7.png", alt="梦想被冷冻", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)\')')
+                            img(src="/img/setting/img8.png", alt="冬季的哈尔滨湖", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)\')')
+                            img(src="/img/setting/img9.png", alt="大雨滂沱", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)\')')
+                            img(src="/img/setting/img10.png", alt="我心爱的人", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)\')')
+                            img(src="/img/setting/img11.png", alt="深蓝色", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to top, #a8edea 0%, #fed6e3 100%)\')')
+                            img(src="/img/setting/img12.png", alt="罕见的风力", style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.box(href='javascript:;', onclick='changeBg(\'linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%)\')')
+                            img(src="/img/setting/img13.png", alt="九寨沟的湖底", style="width: 200px; height: 200px; border-radius: 50%;")
+                    h3 图片（手机）
+                    .bgbox
+                        a.pimgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d4d539a5.webp)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d6d4d539a5.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.pimgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d4e15c9d.webp)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d6d4e15c9d.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.pimgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6f22c03c6.webp)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d6f22c03c6.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.pimgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d56c83eb.webp)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d6d56c83eb.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.pimgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d50b439b.webp)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d6d50b439b.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                    h3 图片（电脑）
+                    .bgbox
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d5574d0e.webp)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d6d5574d0e.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d529adf9.webp)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d6d529adf9.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d5159b31.webp)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d6d5159b31.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d718bbeef6.webp)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d718bbeef6.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72f237d19.jpg)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d72f237d19.jpg', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72f2032c8.jpg)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d72f2032c8.jpg', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2021/12/01/7792ff0082ec4.jpg)\')')
+                            img(src='https://bu.dusays.com/2021/12/01/7792ff0082ec4.jpg', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72ee6d4f3.png)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d72ee6d4f3.png', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72ed76532.jpg)\')')
+                            img(src='https://bu.dusays.com/2022/08/30/630d72ed76532.jpg', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324aea549be6.webp)\')')
+                            img(src='https://bu.dusays.com/2022/09/17/6324aea549be6.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324aec701a68.webp)\')')
+                            img(src='https://bu.dusays.com/2022/09/17/6324aec701a68.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324aef4a5543.webp)\')')
+                            img(src='https://bu.dusays.com/2022/09/17/6324aef4a5543.webp', style="width: 200px; height: 200px; border-radius: 50%;")
+                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324af3622884.webp)\')')
+                            img(src="https://bu.dusays.com/2022/09/17/6324af3622884.webp", style="width: 200px; height: 200px; border-radius: 50%;")
+                    h3 纯色
+                    .bgbox
+                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #7D9D9C', onclick='changeBg(\'#7D9D9C\')')
+                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #fff', onclick='changeBg(\'#fff\')')
+                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #49A6E9', onclick='changeBg(\'#49A6E9\')')
+                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #F7CEFF', onclick='changeBg(\'#F7CEFF\')')
+                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #FFFFCE', onclick='changeBg(\'#FFFFCE\')')
+                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #CFFFCE', onclick='changeBg(\'#CFFFCE\')')
+                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #17EFE9', onclick='changeBg(\'#17EFE9\')')
+                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #9F17EF', onclick='changeBg(\'#9F17EF\')')
+                #con-echarts.asetting
+                    h1 文章统计
+                    h2 监控
+                    iframe(src="https://status.yisous.xyz" width="100%" height="500px" frameborder="no")
+                    if !is_page()
+                        h2 文章统计
+                        script(src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js")
+                        div(id="posts-chart" data-start="2021-01" style="border-radius: 8px; height: 300px; padding: 10px;")
+                        div(id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;")
+                        div(id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;")
+                    h2 访问统计
+                        | 显示不出来请刷新页面
+                        //-下面换成自己的51la统计
+                
+                #con-abouts.asetting
+                    h1 关于
+                    | Charlie_l
+                    br
+                    | Charlie_l's Console
+                    br
+                    | 欢迎
+                    a(href="/messageboard")
+                        | 反馈！
+        #setting-sidesl
+            button(title="恢复默认设置" class="reSettings con-rightside")
+                i.fa.fa-repeat
+            #setting-sides
+                button(title="繁简转换" class="con-rightside" id="con-translate"  onclick="javascript:rmf.translate();")
+                    i.iconfont.icon-fanti
+                button(title="昼夜切换" class="con-rightside" id="con-mode" onclick="switchDarkMode();")
+                    i.fa.fa-adjust
+                if is_post()||is_page()
+                    button(title="阅读模式" class="con-rightside" id="con-reading" onclick="rmf.switchReadMode();")
+                        i.fa.fa-book-open
+                if !is_page()
+                    button(title="单双栏切换" class="con-rightside" id="con-toggleaside" onclick="toggleAside();")
+                        i.fas.fa-arrows-alt-h
+                if is_post()||is_page()
+                    button(title="开关弹幕" class="con-rightside" id="con-barrage" onclick="switchCommentBarrage();")
+                        i.iconfont.icon-danmu
+                button(title="全屏" class="con-rightside" id="con-fullscreen" onclick="fullScreen();")
+                    i.fas.fa-expand
+            

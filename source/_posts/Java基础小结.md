@@ -6,12 +6,13 @@ authorLink: 'https://hiheya.github.io/'
 categories: 技术
 comments: true
 photos: 'https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqqshib2j21kw0w0apc.jpg'
+tags:
+  - Java
+  - Java基础语法
+abbrlink: 9e3ebe18
 date: 2022-08-25 22:42:17
 authorAbout:
 authorDesc:
-tags:
-- Java
-- Java基础语法
 keywords:
 description:
 ---

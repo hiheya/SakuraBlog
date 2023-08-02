@@ -6,12 +6,13 @@ authorLink: 'https://hiheya.github.io/'
 categories: 技术
 comments: true
 photos: 'https://tva2.sinaimg.cn/large/87c01ec7gy1fsnqqanu0wj21kw0w07h2.jpg'
+tags:
+  - Java
+  - Java流程控制
+abbrlink: 2dc51ce6
 date: 2022-08-25 22:40:57
 authorAbout:
 authorDesc:
-tags:
-- Java
-- Java流程控制
 keywords:
 description:
 ---

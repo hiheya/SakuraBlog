@@ -6,12 +6,13 @@ authorLink: 'https://hiheya.github.io/'
 categories: 技术
 comments: true
 photos: 'https://tva1.sinaimg.cn/large/87c01ec7gy1fsnqr4nyw5j21kw0w0e07.jpg'
+tags:
+  - Android
+  - 随笔
+abbrlink: c521edc1
 date: 2022-08-26 11:40:36
 authorAbout:
 authorDesc:
-tags:
-- Android
-- 随笔
 keywords:
 description:
 ---

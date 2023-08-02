@@ -6,14 +6,15 @@ authorLink: 'https://hiheya.github.io/'
 categories: 资源
 comments: true
 photos: 'https://tva1.sinaimg.cn/large/87c01ec7gy1fsnqqxw2orj21kw0w01a9.jpg'
+tags:
+  - 随笔
+password: 123456
+abbrlink: 82958ed6
 date: 2022-08-27 11:35:26
 authorAbout:
 authorDesc:
-tags:
-- 随笔
 keywords:
 description:
-password: 123456
 ---
 
 # Font Awesome Animation各个图标效果

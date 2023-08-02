@@ -6,12 +6,13 @@ authorLink: 'https://hiheya.github.io/'
 categories: 技术
 comments: true
 photos: 'https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqqsevz4j21kw0w07ka.jpg'
+tags:
+  - 随笔
+  - Dos
+abbrlink: 794bccc2
 date: 2022-08-25 22:29:04
 authorAbout:
 authorDesc:
-tags: 
-- 随笔
-- Dos
 keywords:
 description:
 ---

@@ -6,12 +6,13 @@ authorLink: 'https://hiheya.github.io/'
 categories: 技术
 comments: true
 photos: 'https://tva2.sinaimg.cn/large/87c01ec7gy1fsnqqyk36yj21kw0w0k97.jpg'
+tags:
+  - Java
+  - Java异常
+abbrlink: 1b27ed3d
 date: 2022-08-25 22:42:06
 authorAbout:
 authorDesc:
-tags:
-- Java
-- Java异常
 keywords:
 description:
 ---

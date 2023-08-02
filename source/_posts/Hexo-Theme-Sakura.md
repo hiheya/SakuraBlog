@@ -1,19 +1,20 @@
 ---
 title: Hexo-Theme-Sakura
 author: Rookie_l
-avatar: https://icu007.work/wp-content/uploads/2022/08/head.jpeg
-authorLink: https://hiheya.github.io/
-authorAbout:  
-authorDesc:  
+avatar: 'https://icu007.work/wp-content/uploads/2022/08/head.jpeg'
+authorLink: 'https://hiheya.github.io/'
 categories: 技术
-date: 2022-8-22 22:16:01
 comments: true
-tags: 
- - web
- - 悦读
+tags:
+  - web
+  - 悦读
 keywords: Sakura
 description: hexo-sakura主题使用教程
-photos: https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqqp0vyrj21kw0w0h0v.jpg
+photos: 'https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqqp0vyrj21kw0w0h0v.jpg'
+abbrlink: 186f70d4
+date: 2022-08-22 22:16:01
+authorAbout:
+authorDesc:
 ---
 hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-sakura/blob/master/README.md)
 
