@@ -73,7 +73,10 @@
             a.rightMenu-item(href="javascript:rmf.switchReadMode();")
                 i.fa.fa-book
                 span='阅读模式'
-        a.rightMenu-item(href="javascript:pjax.loadUrl(\"/license/\");")
+        //- a.rightMenu-item(href="javascript:pjax.loadUrl(\"/license/\");")
+        //-     i.fa.fa-info-circle
+        //-     span='版权声明'
+        a.rightMenu-item(href="javascript:void(0);", onclick="redirectToLicense();")
             i.fa.fa-info-circle
             span='版权声明'
         a.rightMenu-item(href="javascript:toggleWinbox();")

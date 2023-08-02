@@ -385,9 +385,9 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # Preload the search data when the page loads.
-  preload: false
+  preload: true
   # Show top n results per article, show all results by setting to -1
   top_n_per_article: 1
   # Unescape html strings to the readable one.
@@ -945,7 +945,7 @@ inject:
     - <script src="js/myjs/banner.js"></script>
     - <script type="text/javascript" src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script>
     - <script type="text/javascript" src="https://gcore.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
-    - <script type="text/javascript" src="/js/rightmenu.js"></script>
+    - <script type="text/javascript" src="/js/myjs/rightmenu.js"></script>
     - <script type="text/javascript" src="/js/myjs/setting.js"></script>
     - <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css">

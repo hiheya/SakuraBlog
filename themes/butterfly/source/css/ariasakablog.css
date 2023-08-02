@@ -652,8 +652,8 @@ th{
 hr{
     background:url(https://cdn1.tianli0.top/npm/hassan-assets/img/Bilibili_Dividing_Line.png)!important;
     height:128px;
-    max-width: 98%;
-    /* border:hidden!important; */
+    max-width: 100%;
+    border:hidden!important;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -704,16 +704,7 @@ hr{
     padding: 6px!important;
     /* flex:1; */
 }
-.menus_items:not(#sidebar-menus>.menus_items){
-    /* position: relative; 
-    z-index: 9999; */
-    /* display: flex;
-    justify-content: center !important;
-    flex:auto; */
-    display: flex; /* 使用 flex 布局 */
-    flex-wrap: wrap; /* 子元素换行显示 */
-    gap: 10px; 
-}
+
 .top{
     display: flex;
     flex-flow: column;
