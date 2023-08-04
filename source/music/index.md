@@ -5,14 +5,14 @@ aside: false
 ---
 # 好听的歌
 
-{% tabs  %}
+{% tabs 好听的歌 %}
 {% endtabs %}
 
 # 歌曲排行榜
 
 博主会每隔一段时间将自己近期爱听的歌排行在下面
 
-{% hideToggle 2022-7 %}
+{% hideToggle 歌曲排行榜 2022-7 %}
 {% endhideToggle %}
 
 咕咕咕...

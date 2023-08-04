@@ -1513,10 +1513,29 @@ del:not(.noheimu):hover,s:hover{
 }
 .toc-link{
     border-radius: 4px;
+    /* background-color: transparent;
+    box-shadow: none; */
+    width: fit-content;
+    transition: transform 0.8s cubic-bezier(0.12, 0.61, 0.4, 1.01);
+    /* transform-origin: center; */
 }
+
+.toc-link:not(.active){
+    filter: blur(1.2px);
+    transition: filter 0.3s ease-in-out; 
+}
+
+.toc-content:hover *{
+    filter:none;
+}
+
+
 .toc-link.active{
+    width: fit-content;
     background-color: var(--lyx-theme)!important;
     box-shadow:0 0 6px  var(--lyx-theme)!important;
+    transform: scale(1.2); /* 在active时元素变大, 大小为原始大小的110% */
+    /* transition-property: background-color, box-shadow, transform;  */
 }
 .shuoshuo{
     flex:1;
@@ -2714,7 +2733,7 @@ a:hover{
 .pimgbox,
 .imgbox,
 .box {
-    width: 166px;
+    width: 200px;
     margin: 10px;
     background-size: cover
 }
@@ -2756,8 +2775,8 @@ a:hover{
     }
 }
 .bgbox *{
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
+    border-radius: 50px;
+    /* -webkit-border-radius: 10px; */
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;

@@ -1,5 +1,6 @@
 document.addEventListener('pjax:complete', todis);
 document.addEventListener('DOMContentLoaded', todis);
+window.addEventListener('beforeunload', todis);
 function todis(){
 $.ajax({
     type: 'get',

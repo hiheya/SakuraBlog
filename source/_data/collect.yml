@@ -1,0 +1,80 @@
+- class_name: 📺 电影
+  class_desc: #分类描述
+  link_list:
+    - name: 让子弹飞 #名字
+      img: https://t1.szrtcpa.com/upload/vod/20220313-27/fa8e1f40e62df7aa609cba34f5ee8a25.jpg #图片链接
+      score: 5 # 1-5星
+      icon: fa-solid fa-film #左上角图标
+      tip: 电影 # 右上角文字
+
+    - name: 功夫 #名字
+      img: https://t1.szrtcpa.com/upload/vod/20220315-6/9ea10b791e3f807faaafc4378b75e5eb.jpg #图片链接
+      score: 5 # 1-5星
+      icon: fa-solid fa-film #左上角图标
+      tip: 电影 # 右上角文字
+
+    - name: 超凡蜘蛛侠 #名字
+      img: https://t1.szrtcpa.com/upload/vod/20220313-23/36163edceb82f7ff52f3469369bf2a38.jpg #图片链接
+      score: 5 # 1-5星
+      icon: fa-solid fa-film #左上角图标
+      tip: 电影 # 右上角文字
+
+    - name: 盗梦空间 #名字
+      img: https://t1.szrtcpa.com/upload/vod/20220313-17/972f9cfbf736b5afed47dea3f4956574.jpg #图片链接
+      score: 5 # 1-5星
+      icon: fa-solid fa-film #左上角图标
+      tip: 电影 # 右上角文字
+
+- class_name: 📺 电视剧
+  class_desc: #分类描述
+  link_list:
+    - name: 狂飙 #名字
+      img: https://t1.szrtcpa.com/2023/01/14/920c58b6ca80c.jpg #图片链接
+      score: 5 # 1-5星
+      icon: fa-solid fa-film #左上角图标
+      tip: 国产 # 右上角文字
+
+- class_name: 🍉 动漫
+  class_desc: #分类描述
+  link_list:
+    - name: 夏目友人帐 #名字
+      img: https://t1.szrtcpa.com/2022/08/24/1722c92ec8626.jpg #图片链接
+      score: 5 # 1-5星
+      icon: fa-brands fa-bilibili #左上角图标
+      tip: 日漫 # 右上角文字
+
+- class_name: 📚 书籍
+  class_desc: #分类描述
+  link_list:
+    - name: 图解HTTP #名字
+      img: https://pic.ziyuan.wang/2023/08/03/07eeda6e4cb1e.png #图片链接
+      score: 5 # 1-5星
+      icon: fa-solid fa-book #左上角图标
+      tip: 书籍 # 右上角文字
+  
+- class_name: 📖 小说
+  class_desc: #分类描述
+  link_list:
+    - name: 斗破苍穹 #名字
+      img: https://bookcover.yuewen.com/qdbimg/349573/1209977/300 #图片链接
+      score: 5 # 1-5星
+      icon: fa-solid fa-book-open #左上角图标
+      tip: 网文 # 右上角文字
+
+- class_name: 🏖️ 漫画
+  class_desc: #分类描述
+  link_list:
+    - name: 传武 #名字
+      img: https://res1.xiaoqinre.com/images/cover/201806/15288379690QXHFrUxbJD9s82-.jpg #图片链接
+      score: 5 # 1-5星
+      icon: fa-solid fa-image #左上角图标
+      tip: 漫画 # 右上角文字
+
+- class_name: 🎮 游戏
+  class_desc: #分类描述
+  link_list:
+    - name: 无尽旅途 #名字
+      img: https://img1.doubanio.com/lpic/s33790820.jpg #图片链接
+      score: 5 # 1-5星
+      icon: fa-solid fa-gamepad #左上角图标
+      tip: 益智 # 右上角文字
