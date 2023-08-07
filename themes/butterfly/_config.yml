@@ -11,11 +11,12 @@ nav:
 menu:
   主页: / || fas fa-home
   归档: /archives/ || fas fa-archive
-  标签: /tags/ || fas fa-tags
-  分类: /categories/ || fas fa-folder-open
+  文章||fas fa-file-text:
+    标签: /tags/ || fas fa-tags
+    分类: /categories/ || fas fa-folder-open
   清单||fas fa-list:
     音乐: /music/ || fas fa-music
-    藏宝阁: /movies/ || fas fa-video
+    藏宝阁: /collect/ || fas fa-video
   友链: /links/ || fas fa-link
   留言板: /messageboard/ || fas fa-comment
   每日新闻: /dailynews/ || fas fa-calendar
