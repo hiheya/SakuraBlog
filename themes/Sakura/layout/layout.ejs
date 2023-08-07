@@ -1,0 +1,53 @@
+<%- partial('_partial/head') %>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <%- partial('_partial/headertop', null, {cache: !config.relative_link}) %>
+    <div id="page" class="site wrapper">
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+      <%- body %>
+    </div>    
+    <%- partial('_widget/search/insight') %>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <%- partial('_partial/mheader', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/aplayer', null, {cache: !config.relative_link}) %>
+  
+  <!-- 网站标题恶搞 -->
+  <script src= /js/hititle.js></script>
+  <!-- 点击显示社会主义核心价值观和爱心 -->
+  <script src= /js/shehuizhuyi.js></script>
+  <script src= /js/love.js></script>
+  <!-- 背景添加动态线条，随鼠标动 -->
+  <script src= /js/canvas-nest.min.js></script>
+  <!-- 背景显示飘动的彩带 -->
+  <script src= /js/piao.js></script>
+  <!-- 樱花飘落特效 -->
+  <script src= /js/sakura.js></script>
+  <!-- 禁止鼠标右键以及F12 -->
+  <script src= /js/noSomeKey.js></script>
+  <!-- 预加载 -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <!-- 引入卜算子 -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+  <!-- 实现换肤功能 -->
+  <%- partial('_partial/skin-list') %> 
+  <%- partial('_partial/skin-btn', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/mheader', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/aplayer', null, {cache: !config.relative_link}) %> 
+  <!-- 左侧栏 -->
+  <%- partial('_partial/left', null, {cache: !config.relative_link}) %>
+
+</body>
+</html>
