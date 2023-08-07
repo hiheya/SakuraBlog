@@ -1,0 +1,10 @@
+- class_name: 赞赏
+  reward_list:
+    - name: 榜一大哥 虚位以待
+      amount: 999999
+      datatime: 2023-08-04
+      suffix: '$'
+    # - name: 伴舟先生大霖子
+    #   amount: 4.03
+    #   datatime: 2022-10-27
+    #   suffix: 贝壳

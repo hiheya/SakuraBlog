@@ -704,7 +704,11 @@ hr{
     padding: 6px!important;
     /* flex:1; */
 }
-
+.menus_items:not(#sidebar-menus>.menus_items){
+    /* display: flex; */
+    /* justify-content: center !important; */
+    /* flex:auto; */
+}
 .top{
     display: flex;
     flex-flow: column;
@@ -3447,6 +3451,7 @@ transform: translateY(5px);}
     overflow: hidden;
     width: 180px;
     height: 180px;
+    transition: transform 0.8s ease-out;
   }
   
   #about-page .author-box .image-dot {
@@ -3518,6 +3523,7 @@ transform: translateY(5px);}
     align-items: flex-start;
     flex-direction: column;
     width: 39%;
+    background:  linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
   }
   
   .aboutsiteTips h2 {
@@ -3685,6 +3691,7 @@ transform: translateY(5px);}
   .author-content-item.personalities {
     position: relative;
     width: 59%;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   }
   
   .author-content-item.personalities .image {
@@ -3734,7 +3741,6 @@ transform: translateY(5px);}
   }
   
   .author-content-item.map {
-    background: url(https://bu.dusays.com/2022/11/24/637f581d78d8b.png) no-repeat center;
     min-height: 160px;
     max-height: 400px;
     position: relative;
@@ -3745,12 +3751,17 @@ transform: translateY(5px);}
     transition: 1s ease-in-out;
   }
   [data-theme="dark"] .author-content-item.map {
-    background: url(https://bu.dusays.com/2022/11/30/63870ad13878f.png) no-repeat center;
     background-size: 100%;
   }
   
-  .author-content-item.single {
+  .author-content-item.single.reward {
     width: 100%;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  [data-theme="dark"] .author-content-item.single.reward {
+    width: 100%;
+    color: #362f2f;
+    background-image: linear-gradient(225deg, #f5f7fa 0%, #c3cfe2 100%);
   }
   
   .author-content-item.map .map-title {
@@ -3778,7 +3789,84 @@ transform: translateY(5px);}
     height: -webkit-fill-available;
     height: 40%;
   }
-  .author-content-item.selfInfo div {
+  #about-page .author-box .author-img:hover{
+    transform: scale(1.1); /* 将图像进行 X 和 Y 轴旋转并缩放 1.1 倍 */
+    box-shadow: 0 10px 20px rgba(214, 131, 203, 0.6); /* 添加阴影效果 */
+    transition: transform 1s ease-in-out, box-shadow 0.5s ease-in-out 0.5s;
+  }
+  #about-page .author-content-item.selfInfo.single {
+    background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+  }
+
+  #about-page .myInfoAndSayHello:hover {
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.aboutsiteTips:hover {
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .hello-about:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.skills:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.careers:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .about-statistic.author-content-item:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.map.single:hover{
+    scale: 1.03;
+    /* transition-property: background-color, box-shadow, transform; */
+  }
+  #about-page .author-content-item.selfInfo.single:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.personalities:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.myphoto:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.maxim:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.buff:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.game-yuanshen:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.comic-content:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.like-music:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.like-technology:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.single.reward:hover{
+    scale: 1.03;
+    transition-property: background-color, box-shadow, transform;
+  }
+  #about-page .author-content-item.selfInfo div {
     display: flex;
     flex-direction: column;
     margin: 0.5rem 2rem 0.5rem 0;
@@ -3981,6 +4069,13 @@ transform: translateY(5px);}
     border-radius: 10px;
     padding: 20px 10px !important;
   }
+  .post-reward .reward-main .reward-all{
+    display: flex;
+    margin-left: 380px;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    justify-content: center;
+    align-items: center;
+  }
   .post-reward .reward-main .reward-all .reward-item {
     padding: 0 8px !important;
   }
@@ -3999,6 +4094,7 @@ transform: translateY(5px);}
     flex-direction: column;
     justify-content: center;
     width: 39%;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   }
   .author-content-item .author-content-item-tips {
     opacity: 0.8;
@@ -4101,7 +4197,7 @@ transform: translateY(5px);}
   }
   
   .author-content-item.like-technology {
-    background: url(https://image.anzhiy.cn/adminuploads/1/2022/09/24/632f0dd8f33c6.webp) no-repeat;
+    
     background-size: cover;
     min-height: 230px;
     color: var(--anzhiyu-white);
@@ -4241,6 +4337,23 @@ transform: translateY(5px);}
     width: calc((100% / 3) - 0.5rem);
     margin: 0 0.25rem 0.5rem 0.25rem;
     box-shadow: var(--anzhiyu-shadow-border);
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  }
+
+  [data-theme="dark"] .reward-list-item {
+    padding: 1rem;
+    border-radius: 12px;
+    border: var(--style-border-always);
+    width: calc((100% / 3) - 0.5rem);
+    margin: 0 0.25rem 0.5rem 0.25rem;
+    box-shadow: var(--anzhiyu-shadow-border);
+    color: #362f2f;
+    background-image: linear-gradient(225deg, #fdfcfb 0%, #e2d1c3 100%);
+  }
+
+  .reward-list-item:hover {
+    box-shadow: 0 0 10px rgba(238, 201, 54, 0.5); /* 鼠标经过时增强投影效果 */
+    transform: scale(1.1);
   }
   
   .reward-list-item .reward-list-item-name {
@@ -4258,13 +4371,21 @@ transform: translateY(5px);}
   
   .reward-list-item .reward-list-item-money {
     padding: 4px;
-    background: var(--font-color);
-    color: var(--card-bg);
+    background: linear-gradient(to right, rgb(189, 176, 101) 0%, rgba(255,215,0) 50%, #f5c300 51%, #f5c300 100%);
+    color: rgb(105, 92, 14);
     font-size: 12px;
     line-height: 1;
     border-radius: 4px;
     margin-right: 4px;
     white-space: nowrap;
+    /* box-shadow: 0 0 6px rgba(245, 195, 0, 0.3); */
+    transition: all 0.2s ease-in-out; /* 增加过渡动画效果 */
+  }
+  
+  .reward-list-item .reward-list-item-money:hover {
+    box-shadow: 0 0 10px rgba(238, 201, 54, 0.5); /* 鼠标经过时增强投影效果 */
+    /* border-radius: 5px; */
+    transform: scale(1.5); /* 鼠标经过时增强缩放效果 */
   }
   
   .reward-list-item .reward-list-item-time {
@@ -4274,6 +4395,7 @@ transform: translateY(5px);}
   }
   .author-content-item.careers {
     min-height: 400px;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   }
   .author-content-item.careers .careers-group {
     margin-top: 12px;
@@ -4783,6 +4905,7 @@ transform: translateY(5px);}
     flex-direction: column;
     width: 50%;
     min-height: 450px;
+    background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   }
   
   .author-content-item.skills .skills-style-group {
@@ -4890,7 +5013,6 @@ transform: translateY(5px);}
     content: '';
     left:0;
     top:0;
-    background-image: url(https://bu.dusays.com/2022/11/24/637f5cdc3a1e2.jpg);
     opacity: 0.3;
     background-repeat: no-repeat;
     /* 背景图像大小 */
