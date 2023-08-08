@@ -196,10 +196,11 @@
               .reward-list-item
                 .reward-list-item-name=item.name
                 .reward-list-bottom-group
-                  if item.amount >= 50
-                    .reward-list-item-money(style='background:var(--HiPeach-yellow)')=`¥${item.amount}`
-                  else
-                    .reward-list-item-money=`¥${item.amount + (item.suffix ? item.suffix : "")}`
+                  .reward-list-item-money=`${item.suffix}${item.amount}`
+                  //- if item.amount >= 50
+                  //-   .reward-list-item-money=`${item.suffix}${item.amount}`
+                  //- else
+                  //-   .reward-list-item-money=`¥${item.amount + (item.suffix ? item.suffix : "")}`
                   .datatime.reward-list-item-time(datatime=item.datatime)=new Date(item.datatime).toISOString().slice(0, -14)
           .reward-list-updateDate
             | 更新时间：
