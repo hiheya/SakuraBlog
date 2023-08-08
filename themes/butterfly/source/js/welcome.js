@@ -16,7 +16,7 @@ if ('serviceWorker' in window.navigator && navigator.serviceWorker.controller) {
         }
     })
 }
-
+// localStorage.setItem("popWelcomeWindow", "1");
 if (localStorage.getItem("popWelcomeWindow") != "0") {
     if(document.referrer==undefined||document.referrer.indexOf("hiheya.github.io")!=-1||document.referrer.indexOf("icu007work.gitee.io")!=-1){
         Snackbar.show({
@@ -28,11 +28,20 @@ if (localStorage.getItem("popWelcomeWindow") != "0") {
         Snackbar.show({
                 pos: "top-right",
                 showAction: false,
-                text: `欢迎来自${document.referrer.split("://")[1].split("/")[0]}的童鞋访问本站！`
+                text: `欢迎访问本站！`
             })
         localStorage.setItem("popWelcomeWindow", "0");
     }
 }
+// if (sessionStorage.getItem("popWelcomeWindow") !== "0") {
+//     setTimeout(function () {
+//         Snackbar.show({
+//             text: '欢迎访问本站',
+//             pos: 'top-right',
+//         })
+//     }, 3000)
+// }
+// sessionStorage.setItem("popCookieWindow", "1");
 if (sessionStorage.getItem("popCookieWindow") != "0") {
     setTimeout(function () {
         Snackbar.show({

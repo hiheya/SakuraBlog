@@ -195,6 +195,8 @@ post_copyright:
 # Sponsor/reward
 reward:
   enable: true
+  coinAudio: /media/aowu.m4a
+  # coinAudio: https://cdn.cbd.int/akilar-candyassets@1.0.36/audio/aowu.m4a
   QR_code:
     - img: /img/wechat.jpg
       link:
@@ -761,10 +763,12 @@ display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
-  enable: false
+  enable: true
   field: post # site/post
-  title-prefix-icon: # '\f0c1'
-  title-prefix-icon-color: # '#F47466'
+  # title-prefix-icon: # '\f0c1'
+  # title-prefix-icon-color: # '#F47466'
+  title-prefix-icon: '\f863'
+  title-prefix-icon-color: "#F47466"
 
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
@@ -946,6 +950,7 @@ inject:
     # - <link rel="stylesheet" type="text/css" href="css/mycss/background.css">
     - <link rel="stylesheet" href="/css/mycss/setting.css">
     - <link rel="stylesheet" href="/css/mycss/custom.css">
+    - <link rel="stylesheet" href="/css/mycss/reward.css">
     # - <link rel="stylesheet" type="text/css" href="css/mycss/setting.css">
     # - <link rel="stylesheet" type="text/css" href="css/mycss/custom.css">
     # - <link rel="stylesheet" type="text/css" href="css/background.css">
@@ -1041,6 +1046,8 @@ CDN:
     # main_css:
     # countup.js
     countup_js: /js/myjs/countup.js
+    coin_js: /js/myjs/coin.js
+    coin_css: /css/mycss/coin.css
     # main:
     # utils:
     # translate:
