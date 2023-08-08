@@ -1,5 +1,5 @@
-@font-face {
-  font-family: "iconfont"; /* Project id 3498204 */
+/* @font-face {
+  font-family: "iconfont"; /* Project id 3498204 
   src: url('iconfont.woff2?t=1659311976990') format('woff2'),
        url('iconfont.woff?t=1659311976990') format('woff'),
        url('iconfont.ttf?t=1659311976990') format('truetype');
@@ -51,5 +51,80 @@
 
 .icon-zhihu:before {
   content: "\e60d";
+}
+ */
+ @font-face {
+  font-family: "iconfont"; /* Project id 4201142 */
+  src: url('iconfont.woff2?t=1691411803520') format('woff2'),
+       url('iconfont.woff?t=1691411803520') format('woff'),
+       url('iconfont.ttf?t=1691411803520') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fenlei:before {
+  content: "\e606";
+}
+
+.icon-biaoqing:before {
+  content: "\e607";
+}
+
+.icon-danmu:before {
+  content: "\e612";
+}
+
+.icon-csdn:before {
+  content: "\e60a";
+}
+
+.icon-zhihu:before {
+  content: "\e87c";
+}
+
+.icon-fanti:before {
+  content: "\e6d8";
+}
+
+.icon-rss:before {
+  content: "\e608";
+}
+
+.icon-baidu:before {
+  content: "\e8cb";
+}
+
+.icon-gitee:before {
+  content: "\e60c";
+}
+
+.icon-envelope:before {
+  content: "\e600";
+}
+
+.icon-music:before {
+  content: "\e601";
+}
+
+.icon-comments:before {
+  content: "\e602";
+}
+
+.icon-qq:before {
+  content: "\e603";
+}
+
+.icon-github:before {
+  content: "\e604";
+}
+
+.icon-bilibili:before {
+  content: "\e605";
 }
 

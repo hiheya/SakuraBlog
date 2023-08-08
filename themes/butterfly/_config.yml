@@ -943,8 +943,14 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <link rel="stylesheet" type="text/css" href="css/mycss/background.css">
-    - <link rel="stylesheet" type="text/css" href="css/mycss/setting.css">
+    # - <link rel="stylesheet" type="text/css" href="css/mycss/background.css">
+    - <link rel="stylesheet" href="/css/mycss/setting.css">
+    - <link rel="stylesheet" href="/css/mycss/custom.css">
+    # - <link rel="stylesheet" type="text/css" href="css/mycss/setting.css">
+    # - <link rel="stylesheet" type="text/css" href="css/mycss/custom.css">
+    # - <link rel="stylesheet" type="text/css" href="css/background.css">
+    # - <link rel="stylesheet" type="text/css" href="css/setting.css">
+    # - <link rel="stylesheet" type="text/css" href="css/custom.css">
     # - <link rel="stylesheet" type="text/css" href="css/mycss/bar.css">
     - <link rel="stylesheet" href="/css/rightmenu.css">
     - <link rel="stylesheet" href="/css/iconfont.css">

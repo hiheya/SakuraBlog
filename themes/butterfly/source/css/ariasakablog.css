@@ -650,12 +650,12 @@ th{
     font-size: 44px;
 }
 hr{
-    background:url(https://cdn1.tianli0.top/npm/hassan-assets/img/Bilibili_Dividing_Line.png)!important;
-    height:128px;
+    background:url(https://cdn1.tianli0.top/npm/hassan-assets/img/Bilibili_Dividing_Line.png);
+    height:54px;
     max-width: 100%;
-    border:hidden!important;
-    background-repeat: no-repeat;
-    background-size: cover;
+    border:hidden;
+    /* background-repeat: no-repeat; */
+    background-size: contain;
 }
 .v[data-class=v] .txt-right {
     text-align: right;
@@ -1631,14 +1631,15 @@ pre{
 
 
 /* .pagination 元素的样式 */
-.pagination {
-    margin-top: 10px; 
-    position: absolute; 
-    bottom: 70px; 
-    left: 0;
-    right: 0;
+#recent-posts #pagination .pagination {
+    margin-left: 21rem; 
+    /* position: absolute;  */
+    /* bottom: 70px;  */
+    
 }
-
+/* #archive #pagination .pagination {
+    margin-left: auto;
+} */
 /* .pagination {
     display: flex;
     position: absolute;
@@ -2932,12 +2933,12 @@ body{
 #footer::before{
     backdrop-filter: blur(10px);
 }
-[data-theme="light"] #footer::before{
+/* [data-theme="light"] #footer::before{
     background-color: var(--lyx-white-acrylic2);
 }
 [data-theme="dark"] #footer::before{
     background-color: var(--lyx-black-acrylic2);
-}
+} */
 .footer_custom_text,.copyright{
     color:var(--font-color);
 }

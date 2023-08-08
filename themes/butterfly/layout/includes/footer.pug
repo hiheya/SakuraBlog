@@ -1,17 +1,115 @@
-#footer-wrap
-  if theme.footer.owner.enable
-    - var now = new Date()
-    - var nowYear = now.getFullYear()
-    if theme.footer.owner.since && theme.footer.owner.since != nowYear
-      .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} By ${config.author}`
-    else
-      .copyright!= `&copy;${nowYear} By ${config.author}`
-  if theme.footer.copyright
-    .framework-info
-      span= _p('footer.framework') + ' '
-      a(href='https://hexo.io')= 'Hexo'
-      span.footer-separator |
-      span= _p('footer.theme') + ' '
-      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
-  if theme.footer.custom_text
-    .footer_custom_text!=`${theme.footer.custom_text}`
+#footer_deal
+  a.deal_link(href="https://hiheya.github.io/img/qqfriend.jpg" title="QQ" target="_blank")
+    i.iconfont.icon-qq
+  a.deal_link(href="https://music.163.com/#/user/home?id=1300961291" title="Netease" target="_black")
+    i.iconfont.icon-music
+  a.deal_link(href="https://space.bilibili.com/55406380" title="Bilibili" target="_blank")
+    i.iconfont.icon-bilibili 
+  img.footer_mini_logo.entered.loading(style="border-radius:50%" src='/img/head-1.jpeg' onclick="btf.scrollToDest(0,500)" title="返回顶部")
+  a.deal_link(href="https://github.com/hiheya" title="Github"  target="_blank")
+    i.iconfont.icon-github
+  a.deal_link(href="mailto:rookie_l@icu007.work" title="Email")
+    i.iconfont.icon-envelope
+  a.deal_link(href="https://hiheya.github.io/img/wechatfriend.jpg" title="WeChat" target="_blank")
+    i.iconfont.icon-comments
+#HiPeach-footer
+  .footer-group
+    h3.footer-title 直达
+    .footer-links
+      a.footer-item(href="https://github.com/hiheya" target="_blank") 我的主页
+      a.footer-item(href="https://space.bilibili.com/55406380") 哔哩哔哩
+      a.footer-item(href="https://music.163.com/#/user/home?id=1300961291") 网易音乐
+  .footer-group
+    h3.footer-title 分类
+    .footer-links
+      a.footer-item(href="/categories/") 技术教程
+      a.footer-item(href="/categories/") 软件分享
+      a.footer-item(href="/categories/") 生活杂谈
+      a.footer-item(href="/categories/") 魔改指南
+  .footer-group
+    h3.footer-title 关于
+    .footer-links
+      a.footer-item(href="/about/") 关于作者
+      a.footer-item(href="/archives") 文章归档
+      a.footer-item(href="/update") 更新日志
+  .footer-group
+    h3.footer-title 服务
+    .footer-links
+      a.footer-item(href="https://invite.51.la/1P1Oco1UP?target=V6") 51la统计
+      a.footer-item(href="https://github.com/") 源码存储 
+  .footer-group
+    h3.footer-title 协议
+    .footer-links
+      a.footer-item(href="/cookies/") Cookies
+      a.footer-item(href="/license/") 版权声明
+
+
+
+//- #footer_deal
+//-   a.deal_link(href="https://api.vvhan.com/api/qqCard?qq=2910300459" title="QQ" target="_blank")
+//-     i.iconfont.icon-QQ
+//-   a.deal_link(href="https://music.163.com/#/artist?id=52973735" title="Netease" target="_black")
+//-     i.iconfont.icon-netease
+//-   a.deal_link(href="https://space.bilibili.com/525919323" title="Bilibili" target="_blank")
+//-     i.iconfont.icon-bilibili-fill
+//-   img.footer_mini_logo.entered.loading(style="border-radius:25%" src='/media/favicon.webp' onclick="btf.scrollToDest(0,500)" title="返回顶部")
+//-   a.deal_link(href="https://github.com/HiPeach" title="Github"  target="_blank")
+//-     i.iconfont.icon-github
+//-   a.deal_link(href="https://twitter.com/Peach_Comment" title="Twitter" target="_blank")
+//-     i.iconfont.icon-twitter
+//-   a.deal_link(href="mailto:hi@hipeach.eu.org" title="Email")
+//-     i.iconfont.icon-mail
+//- #HiPeach-footer
+//-   .footer-group
+//-     h3.footer-title 直达
+//-     .footer-links
+//-       a.footer-item(href="https://github.com/HiPeach" target="_blank") 我的主页
+//-       a.footer-item(href="/random") 随机传送
+//-       a.footer-item(href="https://space.bilibili.com/525919323") 哔哩哔哩
+//-       a.footer-item(href="https://music.163.com/#/artist?id=52973735") 网易音乐
+//-   .footer-group
+//-     h3.footer-title 分类
+//-     .footer-links
+//-       a.footer-item(href="/categories/") 技术教程
+//-       a.footer-item(href="/categories/") 软件分享
+//-       a.footer-item(href="/categories/") 生活杂谈
+//-       a.footer-item(href="/categories/") 魔改指南
+//-   .footer-group
+//-     h3.footer-title 关于
+//-     .footer-links
+//-       a.footer-item(href="/about/") 关于作者
+//-       a.footer-item(href="/charts/") 博客统计
+//-       a.footer-item(href="/archives") 文章归档
+//-       a.footer-item(href="/update") 更新日志
+//-   .footer-group
+//-     h3.footer-title 服务
+//-     .footer-links
+//-       a.footer-item(href="https://invite.51.la/1P1Oco1UP?target=V6") 51la统计
+//-       a.footer-item(href="https://clustrmaps.com/") 访客地图
+//-       a.footer-item(href="https://vercel.com/") 站点托管
+//-       a.footer-item(href="https://github.com/") 源码存储 
+//-   .footer-group
+//-     h3.footer-title 协议
+//-     .footer-links
+//-       a.footer-item(href="/cookies/") Cookies
+//-       a.footer-item(href="/friend/") 友链协议
+//-       a.footer-item(href="/privacy/") 隐私协议
+//-       a.footer-item(href="/cc/") 版权协议
+//- #footer-banner
+//-   .footer-banner-links
+//-     .footer-banner-left
+//-       .footer-banner-left
+//-         #footer-banner-tips
+//-         script(src='https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js')
+//-         script.
+//-           var typed = new Typed("#footer-banner-tips", {
+//-             strings: [
+//-               "巧不可语，妙不可言。",
+//-               "Indescribable, indescribable."
+//-               ],
+//-             startDelay: 200,
+//-             backDelay: 2000,
+//-             typeSpeed: 100,
+//-             loop: true,
+//-             backSpeed: 20
+//-           })
