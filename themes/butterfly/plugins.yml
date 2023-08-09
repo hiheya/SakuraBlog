@@ -25,6 +25,7 @@ blueimp_md5:
 valine:
   name: valine
   file: dist/Valine.min.js
+  # file: https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js
   version: 1.5.1
 disqusjs:
   name: disqusjs

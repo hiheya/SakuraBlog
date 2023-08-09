@@ -17,11 +17,11 @@
     color: #666;
 }
 .aplayer {
-    background:#fff;
+    background:rgba(255, 255, 255, 0.6);
     font-family:Arial,Helvetica,sans-serif;
     margin:5px;
     box-shadow:0 2px 2px 0 rgba(0,0,0,.07),0 1px 5px 0 rgba(0,0,0,.1);
-    border-radius:2px;
+    border-radius:10px;
     overflow:hidden;
     -webkit-user-select:none;
     -moz-user-select:none;
@@ -29,6 +29,9 @@
     user-select:none;
     line-height:normal;
     position:relative
+}
+.aplayer:hover{
+    transform: scale(1.05);
 }
 .aplayer * {
     box-sizing:content-box

@@ -11,7 +11,12 @@ script.
         appKey: '#{theme.valine.appKey}',
         avatar: '#{theme.valine.avatar}',
         serverURLs: '#{theme.valine.serverURLs}',
+        placeholder: '#{theme.valine.placeholder}',
         emojiMaps: !{emojiMaps},
+        enableQQ: '#{theme.valine.enableQQ}',
+        master: '1a05412655c3814b90e4a3f0f269f6a4',   //博主邮箱md5加密32位小写
+        tagMeta: ["博主","小伙伴","访客"],     //标识字段名
+        friends:  [],  //小伙伴邮箱Md5
         path: window.location.pathname,
         visitor: #{theme.valine.visitor}
       }, !{JSON.stringify(theme.valine.option)}))

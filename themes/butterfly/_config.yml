@@ -10,15 +10,16 @@ nav:
 # Menu 目錄
 menu:
   主页: / || fas fa-home
-  归档: /archives/ || fas fa-archive
   文章||fas fa-file-text:
+    归档: /archives/ || fas fa-archive
     标签: /tags/ || fas fa-tags
     分类: /categories/ || fas fa-folder-open
   清单||fas fa-list:
     音乐: /music/ || fas fa-music
     藏宝阁: /collect/ || fas fa-video
-  友链: /links/ || fas fa-link
-  留言板: /messageboard/ || fas fa-comment
+  站务||fas fa-bank:
+    友链: /links/ || fas fa-link
+    留言板: /messageboard/ || fas fa-comment
   每日新闻: /dailynews/ || fas fa-calendar
   关于: /about/ || fas fa-heart
   
@@ -30,7 +31,7 @@ highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / 
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: false # unit: px
+highlight_height_limit: 300 # unit: px
 code_word_wrap: false
 
 # Social Settings (社交圖標設置)
