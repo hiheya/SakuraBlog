@@ -20,6 +20,10 @@ aside: false
     link: https://icu007work.gitee.io/
     avatar: https://icu007.work/wp-content/uploads/2022/03/head-1.jpeg
     descr: 偷得浮生半日闲
+  - name: 副站
+    link: https://icu007work.github.io/
+    avatar: https://icu007.work/wp-content/uploads/2022/03/head-1.jpeg
+    descr: 偷得浮生半日闲
 
 {% endflink %}
 
